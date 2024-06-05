@@ -1,0 +1,91 @@
+/* normalisasi style */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/assets/images/background-forgot.png");
+  position: relative;
+  margin-top: 855px;
+  margin-left: 1060px;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: transparent;
+}
+
+.header {
+  color: #8e6447;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.subheader {
+  color: #4f5665;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+form > label {
+  color: #0b132a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+form > div {
+  position: relative;
+  margin-top: 25px;
+}
+
+form > div > input {
+  width: 1480px;
+  height: 82px;
+  outline: 0;
+  border: 2px solid;
+  border-radius: 20px;
+  padding-top: 2px;
+  padding-left: 76px;
+  background: transparent;
+  font-size: 27px;
+  color: #4f5665;
+  margin-bottom: 35px;
+}
+
+.icon {
+  position: absolute;
+  margin-top: 29px;
+  margin-left: 27px;
+  width: 33px;
+  height: 33px;
+}
+
+.forgotpassword {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 32px;
+  margin-left: 1315px;
+  margin-bottom: 10px;
+}
+
+.btn-submit {
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 35px;
+  background-color: #ff8906;
+  border-radius: 20px;
+  border: none;
+  width: 1560px;
+  height: 100px;
+}

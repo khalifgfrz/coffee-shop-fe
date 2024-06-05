@@ -7,9 +7,10 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background-image: url("/assets/images/background-register.png");
+  background-image: url("/assets/images/background-login.png");
   position: relative;
-  margin: 290px 0 0 1035px;
+  margin-top: 540px;
+  margin-left: 1060px;
   background-size: auto;
   background-repeat: no-repeat;
 }
@@ -57,7 +58,7 @@ form > div > input {
   background: transparent;
   font-size: 27px;
   color: #4f5665;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .icon {
@@ -68,7 +69,14 @@ form > div > input {
   height: 33px;
 }
 
-.btn-register {
+.forgotpassword {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 32px;
+  margin-left: 1315px;
+  margin-bottom: 10px;
+}
+
+.btn-login {
   margin-top: 30px;
   align-items: center;
   justify-content: center;
@@ -82,12 +90,12 @@ form > div > input {
   height: 100px;
 }
 
-.login {
+.register {
   color: #4f5665;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
   font-size: 32px;
-  margin-left: 600px;
+  margin-left: 550px;
   margin-top: 40px;
 }
 
