@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-</head>
-<body>
-    <main>
-        <header>
-            <p>Register</p>
-            <p>Fill out the form correctly</p>
-        </header>
-        <section>
-            <!-- register form -->
-            <form>
-                <label for="">Full Name</label>
-                <div>
-                    <img src="/public/images/form-icon.png" alt="name-icon">
-                    <input type="text" placeholder="Enter Your Full Name">
-                </div>
-                <label for="">Email</label>
-                <div>
-                    <img src="/public/images/email-icon.png" alt="">
-                    <input type="text" placeholder="Enter Your Email">
-                </div>
-                <label for="">Password</label>
-                <div>
-                    <img src="" alt="">
-                    <input type="text" placeholder="Enter Your Password">
-                </div>
-                <label for="">Confirm Password</label>
-                <div>
-                    <img src="" alt="">
-                    <input type="text" placeholder="Enter Your Password Again">
-                </div>
-            </form>
-        </section>
-        <section>
-            <!-- sign up option -->
-        </section>
+    <link rel="stylesheet" href="styles/register.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h2 class="header">Register</h2>
+        <p class="subheader">Fill out the form correctly</p>
+      </header>
+      <section>
+        <!-- register form -->
+        <form>
+          <label for="fullname">Full Name</label>
+          <div>
+            <img src="/assets/images/form-icon.png" alt="name-icon" class="icon" />
+            <input type="text" placeholder="Enter Your Full Name" class="input" />
+          </div>
+          <label for="email">Email</label>
+          <div>
+            <img src="/assets/images/email-icon.png" alt="email-icon" class="icon" />
+            <input type="text" placeholder="Enter Your Email" class="input" />
+          </div>
+          <label for="password">Password</label>
+          <div>
+            <img src="/assets/images/password-icon.png" alt="password-icon" class="icon" />
+            <input type="password" placeholder="Enter Your Password" class="input" />
+          </div>
+          <label for="confirmpassword">Confirm Password</label>
+          <div>
+            <img src="/assets/images/password-icon.png" alt="confirmpassword-icon" class="icon" />
+            <input type="password" placeholder="Enter Your Password Again" class="input" />
+          </div>
+          <button class="btn-register" type="submit">Register</button>
+          <p class="login">Have An Account? <a class="loginhref" href="#">Login</a></p>
+        </form>
+      </section>
+      <section>
+        <!-- sign up option -->
+        <p class="or">Or</p>
+        <div>
+          <button class="btn-facebook">
+            <div>
+              <img src="/assets/images/facebook-icon.png" alt="facebook-icon" class="facebook-icon" />
+              <span class="facebook-text">Facebook</span>
+            </div>
+          </button>
+          <button class="btn-google">
+            <img src="/assets/images/google-icon.png" alt="google-icon" class="google-icon" />
+            <span class="google-text">Google</span>
+          </button>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>

@@ -1,0 +1,197 @@
+/* normalisasi style */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/assets/images/background.png");
+  position: relative;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  margin: 290px 0 0 1035px;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: transparent;
+}
+
+.header {
+  color: #8e6447;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.subheader {
+  color: #4f5665;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+form > label {
+  color: #0b132a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+form > div {
+  position: relative;
+  margin-top: 25px;
+}
+
+.input {
+  width: 1480px;
+  height: 82px;
+  outline: 0;
+  border: 2px solid;
+  border-radius: 20px;
+  padding-top: 2px;
+  padding-left: 76px;
+  background: transparent;
+  font-size: 27px;
+  color: #4f5665;
+  margin-bottom: 50px;
+}
+
+.icon {
+  position: absolute;
+  margin-top: 29px;
+  margin-left: 27px;
+  width: 33px;
+  height: 33px;
+}
+
+.btn-register {
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 35px;
+  background-color: #ff8906;
+  border-radius: 20px;
+  border: none;
+  width: 1560px;
+  height: 100px;
+}
+
+.login {
+  color: #4f5665;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin-left: 600px;
+  margin-top: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #ff8906;
+}
+
+a:hover {
+  color: #e98513;
+  text-decoration: underline;
+}
+
+.or {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-left: 770px;
+  color: #aaaaaa;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.btn-facebook {
+  align-items: center;
+  justify-content: center;
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 35px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: none;
+  width: 600px;
+  height: 125px;
+}
+
+.btn-facebook:hover {
+  align-items: center;
+  justify-content: center;
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 35px;
+  background-color: #cacaca;
+  border-radius: 20px;
+  border: none;
+  width: 600px;
+  height: 125px;
+}
+
+.facebook-text {
+  margin-left: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #4f5665;
+}
+
+.facebook-icon {
+  margin-top: 29px;
+  width: 33px;
+  height: 33px;
+}
+
+.btn-google {
+  margin-left: 300px;
+  align-items: center;
+  justify-content: center;
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 35px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: none;
+  width: 600px;
+  height: 125px;
+}
+
+.btn-google:hover {
+  margin-left: 300px;
+  align-items: center;
+  justify-content: center;
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 35px;
+  background-color: #cacaca;
+  border-radius: 20px;
+  border: none;
+  width: 600px;
+  height: 125px;
+}
+
+.google-text {
+  margin-left: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #4f5665;
+}
+
+.google-icon {
+  margin-top: 29px;
+  width: 33px;
+  height: 33px;
+}
