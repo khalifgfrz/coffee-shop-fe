@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles/profile.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
+    <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#">
+        <img src="/assets/images/navbar-logo.png" alt="navbar-logo" class="navbar-logo" />
+      </a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#product">Product</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+      </div>
+      <div class="navbar-btn">
+        <button class="btn-signin">Sign In</button>
+        <button class="btn-signup">Sign Up</button>
+      </div>
+    </nav>
+    <main class="container">
+      <header>
+        <h1>Profile</h1>
+      </header>
+      <section id="profile" class="profile">
+        <div class="profile-img">
+          <p class="name">Ghaluh Wizard</p>
+          <p class="email">ghaluhwizz@gmail.com</p>
+          <img src="assets/images/profile-img.png" alt="profile-img" class="image" />
+          <button class="btn-img">Upload New Photo</button>
+          <p class="since">Since 20 January 2024</p>
+        </div>
+        <div class="profile-details">
+          <form>
+            <label for="fullname">Full Name</label>
+            <div>
+              <img src="/assets/images/form-icon.png" alt="name-icon" class="icon" />
+              <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" autocomplete="name" />
+            </div>
+            <label for="email">Email</label>
+            <div>
+              <img src="/assets/images/email-icon.png" alt="email-icon" class="icon" />
+              <input type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
+            </div>
+            <label for="phone">Phone</label>
+            <div>
+              <img src="/assets/images/phone-icon.png" alt="phone-icon" class="icon" />
+              <input type="number" name="phone" id="phone" placeholder="Enter Your Phone" autocomplete="off" />
+            </div>
+            <p>Set New Password</p>
+            <label for="password">Password</label>
+            <div>
+              <img src="/assets/images/password-icon.png" alt="password-icon" class="icon" />
+              <input type="password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off" />
+            </div>
+            <label for="address">Address</label>
+            <div>
+              <img src="/assets/images/address-icon.png" alt="address-icon" class="icon" />
+              <input type="text" name="address" id="address" placeholder="Enter Your Address" autocomplete="off" />
+            </div>
+            <button class="btn-submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="description">
+          <img src="assets/images/footer-logo.png" alt="footer-logo" class="footer-logo" />
+          <p class="desc">
+            Coffee Shop is a store that sells some good <br />
+            meals, and especially coffee. We provide <br />
+            high quality beans
+          </p>
+          <p class="copyright">&copy; 2024CoffeeStore</p>
+        </div>
+        <div class="product">
+          <h3>Product</h3>
+          <a href="#">Our Product</a>
+          <a href="#">Pricing</a>
+          <a href="#">Locations</a>
+          <a href="#">Countries</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="engage">
+          <h3>Engage</h3>
+          <a href="#">Partner</a>
+          <a href="#">FAQ</a>
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="socials">
+          <h3>Social Media</h3>
+          <a href="#"><img src="assets/images/facebook-icon-orange.png" alt="facebook-icon" /></a>
+          <a href="#"><img src="assets/images/twitter-icon-orange.png" alt="twitter-icon" /></a>
+          <a href="#"><img src="assets/images/instagram-icon-orange.png" alt="instagram-icon" /></a>
+        </div>
+      </footer>
+    </main>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

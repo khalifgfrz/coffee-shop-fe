@@ -1,0 +1,270 @@
+:root {
+  --primary: #ff8906;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: #0b0909;
+  left: 0;
+  right: 0;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 2rem;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-btn {
+  margin: 0 1rem;
+}
+
+.navbar .navbar-btn .btn-signin {
+  background-color: #0b0909;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  width: 6em;
+  height: 3em;
+  margin-right: 2rem;
+}
+
+.navbar .navbar-btn .btn-signin:hover {
+  background-color: #353030;
+  cursor: pointer;
+}
+
+.navbar .navbar-btn .btn-signup {
+  background-color: var(--primary);
+  border-radius: 5px;
+  color: #0b132a;
+  font-size: 18px;
+  width: 6em;
+  height: 3em;
+}
+
+.navbar .navbar-btn .btn-signup:hover {
+  background-color: #e77d04;
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+  margin-top: 5em;
+}
+
+header {
+  font-size: 1.5rem;
+  margin-bottom: 2em;
+  margin-left: 5em;
+}
+
+.profile {
+  display: flex;
+  margin-left: 7.5em;
+}
+
+.profile-img {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border: 1px solid #e8e8e8;
+  margin-right: 5em;
+  padding: 2em;
+}
+
+.profile-img p,
+.profile-img button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img .name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.profile-img .email {
+  margin-bottom: 1.2em;
+}
+
+.profile-img .image {
+  margin-left: 3.7em;
+  width: 7em;
+  height: 7em;
+  margin-bottom: 1em;
+}
+
+.profile-img .btn-img {
+  background-color: var(--primary);
+  border-radius: 5px;
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 16px;
+  width: 14em;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #e8e8e8;
+  margin-right: 5em;
+  padding: 3em;
+}
+
+.profile-details p {
+  text-align: right;
+  color: var(--primary);
+}
+
+form label {
+  color: #0b132a;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+form div {
+  position: relative;
+  margin-top: 15px;
+}
+
+form div input {
+  width: 60em;
+  height: 50px;
+  outline: 0;
+  border: 2px solid;
+  border-radius: 10px;
+  padding-top: 2px;
+  padding-left: 60px;
+  background: transparent;
+  font-size: 15px;
+  color: #4f5665;
+  margin-bottom: 20px;
+}
+
+form div img {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 33px;
+  height: 33px;
+}
+
+.btn-submit {
+  margin-top: 10px;
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: #ff8906;
+  border-radius: 10px;
+  border: none;
+  width: 60em;
+  height: 45px;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  background-color: #f8f8f8;
+  padding: 1rem 2rem 3rem;
+  margin-top: 3rem;
+}
+
+footer div {
+  margin-right: 4em;
+}
+
+footer .description {
+  padding: 2em;
+}
+
+footer .description .desc {
+  margin-bottom: 30px;
+  color: #4f5665;
+}
+
+footer .description .copyright {
+  font-size: 0.8rem;
+  color: #afb5c0;
+}
+
+footer div .footer-logo {
+  width: 10em;
+  height: 2.5em;
+  margin-bottom: 20px;
+}
+
+footer .product,
+footer .engage,
+footer .socials {
+  padding: 1em;
+}
+
+footer .product h3,
+footer .engage h3,
+footer .socials h3 {
+  margin-bottom: 1.5em;
+}
+
+footer .product a,
+footer .engage a {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  color: #4f5665;
+}
+
+footer .socials a img {
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 1em;
+}
