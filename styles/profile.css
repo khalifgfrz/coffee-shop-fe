@@ -9,6 +9,7 @@
   outline: none;
   border: none;
   text-decoration: none;
+  outline: 1px solid red;
 }
 
 html {
@@ -263,10 +264,18 @@ footer .engage a {
   color: #4f5665;
 }
 
+footer .product a:hover,
+footer .engage a:hover {
+  color: #b2b2b4;
+}
+
+footer .socials a {
+  margin-right: 1em;
+}
+
 footer .socials a img {
   width: 2.5em;
   height: 2.5em;
-  margin-right: 1em;
 }
 
 /* Media Queries */
