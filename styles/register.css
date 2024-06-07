@@ -181,3 +181,11 @@ a:hover {
   width: 20px;
   height: 20px;
 }
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}

@@ -1,5 +1,6 @@
 :root {
   --primary: #ff8906;
+  --secondary: #8E6447;
 }
 
 * {
@@ -90,4 +91,195 @@ body {
 .navbar .navbar-btn .btn-signup:hover {
   background-color: #e77d04;
   cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/assets/images/background-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .started {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #0B132A;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .plus {
+  display: flex;
+  margin-top: 2em ;
+}
+
+.hero .content .plus .staff {
+  padding-right: 4em;
+}
+
+.hero .content .plus .stores, .hero .content .plus .customer {
+  padding-left: 2em;
+  padding-right: 4em;
+}
+
+.hero .content .plus .stores {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.hero .content .plus .staff .staff-number, .hero .content .plus .stores .stores-number, .hero .content .plus .customer .customer-number {
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.hero .content .plus .staff .staff-text, .hero .content .plus .stores .stores-text, .hero .content .plus .customer .customer-text {
+  font-size: 1em;
+}
+
+.about {
+  display: flex;
+}
+
+.about .content {
+  flex: 1 1 35rem;
+  padding: 5rem;
+}
+
+.about .content .content-header {
+  display: flex;
+  align-items: center;
+}
+
+.about .content .content-header .vertical-line {
+  width: 10px;
+  height: 50px;
+  background-color: var(--primary);
+  margin-right: 20px;
+}
+
+.about .content .content-header h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.about .content .content-header h1 span, .menu .menu-header h1 span {
+  color: var(--secondary)
+}
+
+.about .content p {
+  color: #4F5665;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.about .content .content-group {
+  display: flex;
+}
+
+.about .content .content-group p {
+  margin-left: 10px;
+}
+
+.about .about-img {
+  flex: 1 1 33.6rem;
+}
+
+.about .about-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  margin-top: 5em;
+}
+.menu .menu-header h1, .menu .menu-header p, .menu .row {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.menu .menu-header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.menu .menu-header h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.menu .menu-header .horizontal-line {
+  width: 50px;
+  height: 5px;
+  background-color: var(--primary);
+  margin: 1.5em 50em;
+}
+
+.menu .menu-header p {
+  font-weight: 400;
+  color: #4F5665;
+  margin-bottom: 5em;
+}
+
+.menu .row {
+  display: flex;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+  justify-content: center;
+  width: 70%;
+}
+
+.menu .row .menu-card .menu-details {
+  padding: 0 5em;
+}
+
+
+
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
 }
