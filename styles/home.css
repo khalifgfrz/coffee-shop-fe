@@ -1,0 +1,93 @@
+:root {
+  --primary: #ff8906;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: #0b0909;
+  left: 0;
+  right: 0;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 2rem;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-btn {
+  margin: 0 1rem;
+}
+
+.navbar .navbar-btn .btn-signin {
+  background-color: #0b0909;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  width: 6em;
+  height: 3em;
+  margin-right: 2rem;
+}
+
+.navbar .navbar-btn .btn-signin:hover {
+  background-color: #353030;
+  cursor: pointer;
+}
+
+.navbar .navbar-btn .btn-signup {
+  background-color: var(--primary);
+  border-radius: 5px;
+  color: #0b132a;
+  font-size: 18px;
+  width: 6em;
+  height: 3em;
+}
+
+.navbar .navbar-btn .btn-signup:hover {
+  background-color: #e77d04;
+  cursor: pointer;
+}
