@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="styles/product.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
+    <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#">
+        <img src="/assets/images/navbar-logo.png" alt="navbar-logo" class="navbar-logo" />
+      </a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#product">Product</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+      </div>
+      <div class="navbar-btn">
+        <button class="btn-signin">Sign In</button>
+        <button class="btn-signup">Sign Up</button>
+      </div>
+    </nav>
+    <main class="container">
+      <section class="hero" id="header">
+        <h1>We Provide Good Coffee and Healthy Meals</h1>
+      </section>
+      <section id="promo" class="promo">
+        <div class="promo-header">
+          <h1>Today <span>Promo</span></h1>
+          <div class="btn-promo">
+            <button class="left-button">&#9664;</button>
+            <button class="right-button">&#9654;</button>
+          </div>
+        </div>
+        <div class="promo-body">
+          <div class="promo-coupon">
+            <div class="promo-img">
+              <img src="assets/images/promo/1.png" alt="promo-img" />
+            </div>
+            <div class="promo-details">
+              <h3>HAPPY MOTHER'S DAY!</h3>
+              <p class="promo-description">Get one of our favorite menu for free!</p>
+              <p class="claim">Klaim Kupon</p>
+            </div>
+          </div>
+          <div class="promo-coupon">
+            <div class="promo-img">
+              <img src="assets/images/promo/1.png" alt="promo-img" />
+            </div>
+            <div class="promo-details">
+              <h3>HAPPY MOTHER'S DAY!</h3>
+              <p class="promo-description">Get one of our favorite menu for free!</p>
+              <p class="claim">Klaim Kupon</p>
+            </div>
+          </div>
+          <div class="promo-coupon">
+            <div class="promo-img">
+              <img src="assets/images/promo/1.png" alt="promo-img" />
+            </div>
+            <div class="promo-details">
+              <h3>HAPPY MOTHER'S DAY!</h3>
+              <p class="promo-description">Get one of our favorite menu for free!</p>
+              <p class="claim">Klaim Kupon</p>
+            </div>
+          </div>
+          <div class="promo-coupon-2">
+            <div class="promo-img">
+              <img src="assets/images/promo/2.png" alt="promo-img" />
+            </div>
+            <div class="promo-details">
+              <h3>Get a cup of coffee for free on sunday morning</h3>
+              <p class="promo-description">Only at 7 to 9 AM</p>
+            </div>
+          </div>
+          <div class="pagination-dots">
+            <div class="dot" data-page="1"></div>
+            <div class="dot" data-page="2"></div>
+            <div class="dot" data-page="3"></div>
+            <div class="dot" data-page="4"></div>
+          </div>
+        </div>
+      </section>
+      <section class="product" id="product">
+        <h1>Our <span>Product</span></h1>
+        <div class="product-body">
+          <div class="product-filter">
+            <div class="product-filter-header">
+              <p class="filter">Filter</p>
+              <a href="#" class="reset-filter">Reset Filter</a>
+            </div>
+            <div class="product-search">
+              <form>
+                <label id="search" class="search" for="search">Search</label>
+                <div>
+                  <input type="text" name="search" id="search" placeholder="Search Your Product" autocomplete="off" />
+                </div>
+              </form>
+            </div>
+            <div class="product-category">
+              <h3>Category</h3>
+              <label class="checkbox" for="favorite-product">
+                <input type="checkbox" id="favorite-product" name="favorite-product" />
+                <div class="checkmark"></div>
+                Favorite Product
+              </label>
+              <label class="checkbox" for="coffee">
+                <input type="checkbox" id="coffee" name="coffee" />
+                <div class="checkmark"></div>
+                Coffee
+              </label>
+              <label class="checkbox" for="non-coffee">
+                <input type="checkbox" id="non-coffee" name="non-coffee" />
+                <div class="checkmark"></div>
+                Non Coffee
+              </label>
+              <label class="checkbox" for="foods">
+                <input type="checkbox" id="foods" name="foods" />
+                <div class="checkmark"></div>
+                Foods
+              </label>
+              <label class="checkbox" for="add-on">
+                <input type="checkbox" id="add-on" name="add-on" />
+                <div class="checkmark"></div>
+                Add-On
+              </label>
+            </div>
+            <div class="product-sort">
+              <h3>Sort By</h3>
+              <label class="checkbox" for="buy1get1">
+                <input type="checkbox" id="buy1get1" name="buy1get1" />
+                <div class="checkmark"></div>
+                Buy 1 get 1
+              </label>
+              <label class="checkbox" for="flash-sale">
+                <input type="checkbox" id="flash-sale" name="flash-sale" />
+                <div class="checkmark"></div>
+                Flash Sale
+              </label>
+              <label class="checkbox" for="birthday-package">
+                <input type="checkbox" id="birthday-package" name="birthday-package" />
+                <div class="checkmark"></div>
+                Birthday Package
+              </label>
+              <label class="checkbox" for="cheap">
+                <input type="checkbox" id="cheap" name="cheap" />
+                <div class="checkmark"></div>
+                Cheap
+              </label>
+            </div>
+            <div class="product-range">
+              <h3>Range Price</h3>
+              <div class="range-slider">
+                <div class="range-track"></div>
+                <div class="range-progress" id="range-progress"></div>
+                <input type="range" id="min-price-range" min="0" max="1000" step="10" value="100" />
+                <input type="range" id="max-price-range" min="0" max="1000" step="10" value="900" />
+                <div class="price-labels">
+                  <span id="min-price-value">Idr.100</span>
+                  <span id="max-price-value">Idr.900</span>
+                </div>
+              </div>
+            </div>
+            <button class="btn-apply">Apply Filter</button>
+          </div>
+          <div class="product-menu">
+            <div class="product-card">
+              <div class="menu-card">
+                <p>FLASH SALE!</p>
+                <img src="assets/images/menu/1.png" alt="Hazzlenut Latte" />
+                <div class="menu-details">
+                  <h3>Hazzlenut Latte</h3>
+                  <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                  <div class="star-rating">
+                    <div class="star" data-value="1">&#9733;</div>
+                    <div class="star" data-value="2">&#9733;</div>
+                    <div class="star" data-value="3">&#9733;</div>
+                    <div class="star" data-value="4">&#9733;</div>
+                    <div class="star" data-value="5">&#9733;</div>
+                    <div class="rating-value">5.0</div>
+                  </div>
+                  <div class="price">
+                    <p class="price-normal">IDR 20.000</p>
+                    <p class="price-discount">IDR 10.000</p>
+                  </div>
+                  <div class="menu-btn">
+                    <button class="btn-buy">Buy</button>
+                    <button class="btn-cart"><i data-feather="shopping-cart"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-card">
+                <p>FLASH SALE!</p>
+                <img src="assets/images/menu/1.png" alt="Hazzlenut Latte" />
+                <div class="menu-details">
+                  <h3>Hazzlenut Latte</h3>
+                  <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                  <div class="star-rating">
+                    <div class="star" data-value="1">&#9733;</div>
+                    <div class="star" data-value="2">&#9733;</div>
+                    <div class="star" data-value="3">&#9733;</div>
+                    <div class="star" data-value="4">&#9733;</div>
+                    <div class="star" data-value="5">&#9733;</div>
+                    <div class="rating-value">5.0</div>
+                  </div>
+                  <div class="price">
+                    <p class="price-normal">IDR 20.000</p>
+                    <p class="price-discount">IDR 10.000</p>
+                  </div>
+                  <div class="menu-btn">
+                    <button class="btn-buy">Buy</button>
+                    <button class="btn-cart"><i data-feather="shopping-cart"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="menu-card">
+                <p>FLASH SALE!</p>
+                <img src="assets/images/menu/1.png" alt="Hazzlenut Latte" />
+                <div class="menu-details">
+                  <h3>Hazzlenut Latte</h3>
+                  <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                  <div class="star-rating">
+                    <div class="star" data-value="1">&#9733;</div>
+                    <div class="star" data-value="2">&#9733;</div>
+                    <div class="star" data-value="3">&#9733;</div>
+                    <div class="star" data-value="4">&#9733;</div>
+                    <div class="star" data-value="5">&#9733;</div>
+                    <div class="rating-value">5.0</div>
+                  </div>
+                  <div class="price">
+                    <p class="price-normal">IDR 20.000</p>
+                    <p class="price-discount">IDR 10.000</p>
+                  </div>
+                  <div class="menu-btn">
+                    <button class="btn-buy">Buy</button>
+                    <button class="btn-cart"><i data-feather="shopping-cart"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-card">
+                <p>FLASH SALE!</p>
+                <img src="assets/images/menu/1.png" alt="Hazzlenut Latte" />
+                <div class="menu-details">
+                  <h3>Hazzlenut Latte</h3>
+                  <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                  <div class="star-rating">
+                    <div class="star" data-value="1">&#9733;</div>
+                    <div class="star" data-value="2">&#9733;</div>
+                    <div class="star" data-value="3">&#9733;</div>
+                    <div class="star" data-value="4">&#9733;</div>
+                    <div class="star" data-value="5">&#9733;</div>
+                    <div class="rating-value">5.0</div>
+                  </div>
+                  <div class="price">
+                    <p class="price-normal">IDR 20.000</p>
+                    <p class="price-discount">IDR 10.000</p>
+                  </div>
+                  <div class="menu-btn">
+                    <button class="btn-buy">Buy</button>
+                    <button class="btn-cart"><i data-feather="shopping-cart"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-page">
+          <button class="page-1">1</button>
+          <button class="page-2">2</button>
+          <button class="page-3">3</button>
+          <button class="page-4">4</button>
+          <button class="right-button">&#9654;</button>
+        </div>
+      </section>
+      <footer>
+        <div class="description">
+          <img src="assets/images/footer-logo.png" alt="footer-logo" class="footer-logo" />
+          <p class="desc">
+            Coffee Shop is a store that sells some good <br />
+            meals, and especially coffee. We provide <br />
+            high quality beans
+          </p>
+          <p class="copyright">&copy; 2024CoffeeStore</p>
+        </div>
+        <div class="product">
+          <h3>Product</h3>
+          <a href="#">Our Product</a>
+          <a href="#">Pricing</a>
+          <a href="#">Locations</a>
+          <a href="#">Countries</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="engage">
+          <h3>Engage</h3>
+          <a href="#">Partner</a>
+          <a href="#">FAQ</a>
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="socials">
+          <h3>Social Media</h3>
+          <a href="#"><img src="assets/images/facebook-icon-orange.png" alt="facebook-icon" /></a>
+          <a href="#"><img src="assets/images/twitter-icon-orange.png" alt="twitter-icon" /></a>
+          <a href="#"><img src="assets/images/instagram-icon-orange.png" alt="instagram-icon" /></a>
+        </div>
+      </footer>
+    </main>
+    <script>
+      const minPriceRange = document.getElementById("min-price-range");
+      const maxPriceRange = document.getElementById("max-price-range");
+      const minPriceValue = document.getElementById("min-price-value");
+      const maxPriceValue = document.getElementById("max-price-value");
+      const rangeProgress = document.getElementById("range-progress");
+
+      function updateProgress() {
+        const min = parseInt(minPriceRange.value);
+        const max = parseInt(maxPriceRange.value);
+        if (min > max - 10) {
+          minPriceRange.value = max - 10;
+        }
+        if (max < min + 10) {
+          maxPriceRange.value = min + 10;
+        }
+        minPriceValue.textContent = `Idr.${minPriceRange.value}`;
+        maxPriceValue.textContent = `Idr.${maxPriceRange.value}`;
+        rangeProgress.style.left = `${(min / 1000) * 100}%`;
+        rangeProgress.style.right = `${100 - (max / 1000) * 100}%`;
+
+        // Update the position of the price labels
+        minPriceValue.style.left = `${(min / 1000) * 100}%`;
+        maxPriceValue.style.left = `${(max / 1000) * 100}%`;
+      }
+
+      minPriceRange.addEventListener("input", updateProgress);
+      maxPriceRange.addEventListener("input", updateProgress);
+
+      // Initial update
+      updateProgress();
+      feather.replace();
+    </script>
+  </body>
+</html>
