@@ -1,3 +1,4 @@
+/* Normalisasi style */
 :root {
   --primary: #ff8906;
 }
@@ -9,7 +10,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  outline: 1px solid red;
 }
 
 html {
@@ -20,27 +20,31 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 7%;
+  padding: 1em 7%;
   background-color: #0b0909;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
+  z-index: 9999;
 }
 
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
-  font-size: 1.3rem;
-  margin: 0 2rem;
+  font-size: 1rem;
+  margin: 0 1em;
 }
 
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5em;
   border-bottom: 0.1rem solid var(--primary);
   transform: scaleX(0);
   transition: 0.2s linear;
@@ -52,7 +56,7 @@ body {
 
 .navbar .navbar-extra a {
   color: #fff;
-  margin: 0 0.5rem;
+  margin: 0 0.5em;
 }
 
 .navbar .navbar-extra a:hover {
@@ -60,7 +64,7 @@ body {
 }
 
 .navbar .navbar-btn {
-  margin: 0 1rem;
+  margin: 0 0.5em;
 }
 
 .navbar .navbar-btn .btn-signin {
@@ -68,10 +72,10 @@ body {
   border: 1px solid #fff;
   border-radius: 5px;
   color: #fff;
-  font-size: 18px;
+  font-size: 1rem;
   width: 6em;
   height: 3em;
-  margin-right: 2rem;
+  margin-right: 2em;
 }
 
 .navbar .navbar-btn .btn-signin:hover {
@@ -83,7 +87,7 @@ body {
   background-color: var(--primary);
   border-radius: 5px;
   color: #0b132a;
-  font-size: 18px;
+  font-size: 1rem;
   width: 6em;
   height: 3em;
 }
@@ -93,56 +97,76 @@ body {
   cursor: pointer;
 }
 
+.navbar .navbar-hamburger a {
+  color: #fff;
+  margin: 0 0.5em;
+}
+
+.navbar .navbar-hamburger a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Container */
 .container {
-  min-height: 100vh;
-  margin-top: 5em;
+  margin-top: 10%;
 }
 
-header {
-  font-size: 1.5rem;
-  margin-bottom: 2em;
-  margin-left: 10em;
+.body {
+  margin-left: 10%;
 }
 
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+/* Profile */
 .profile {
   display: flex;
-  margin-left: 15em;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.profile-img {
-  display: flex;
-  position: relative;
-  flex-direction: column;
+/* Profile Details */
+.profile-details {
   border: 1px solid #e8e8e8;
-  margin-right: 5em;
   padding: 2em;
+  height: 50%;
 }
 
-.profile-img p,
-.profile-img button {
+.profile-details p {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.profile-img .name {
+.profile-details .name {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.5em;
 }
 
-.profile-img .email {
+.profile-details .email {
   margin-bottom: 1.2em;
 }
 
-.profile-img .image {
-  margin-left: 3.7em;
-  width: 7em;
-  height: 7em;
+.profile-details .profile-img {
+  display: grid;
+  place-items: center;
   margin-bottom: 1em;
 }
 
-.profile-img .btn-img {
+.profile-details .profile-img img {
+  display: grid;
+  place-items: center;
+  width: 50%;
+}
+
+.profile-details .btn-upload {
   background-color: var(--primary);
   border-radius: 5px;
   color: #0b132a;
@@ -153,135 +177,263 @@ header {
   margin-bottom: 1em;
 }
 
-.profile-details {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border: 1px solid #e8e8e8;
-  margin-right: 5em;
-  padding: 3em;
+.profile-details .btn-upload:hover {
+  background-color: #e77d04;
+  cursor: pointer;
 }
 
-.profile-details p {
+/* Profile Form */
+.profile-form {
+  width: 60%;
+  border: 1px solid #e8e8e8;
+  padding: 2em;
+}
+
+.profile-form .password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-form .password p {
   text-align: right;
   color: var(--primary);
 }
 
-form label {
+.profile-form form label {
   color: #0b132a;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
-form div {
+.profile-form form div {
   position: relative;
   margin-top: 15px;
 }
 
-form div input {
-  width: 60em;
+.profile-form form div input {
+  width: 100%;
   height: 50px;
   outline: 0;
-  border: 2px solid;
+  border: 1px solid #dedede;
   border-radius: 10px;
   padding-top: 2px;
   padding-left: 60px;
   background: transparent;
-  font-size: 15px;
+  font-size: 1rem;
   color: #4f5665;
   margin-bottom: 20px;
 }
 
-form div img {
+.profile-form form div img {
   position: absolute;
-  margin-top: 10px;
-  margin-left: 15px;
-  width: 33px;
-  height: 33px;
+  margin-top: 16px;
+  margin-left: 20px;
 }
 
-.btn-submit {
+.profile-form button {
   margin-top: 10px;
   color: #0b132a;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1.3rem;
   background-color: #ff8906;
   border-radius: 10px;
   border: none;
-  width: 60em;
+  width: 100%;
   height: 45px;
   cursor: pointer;
 }
 
+.profile-form .btn-submit:hover {
+  background-color: #e77d04;
+  cursor: pointer;
+}
+
+/* Footer */
 footer {
   display: flex;
+  flex-wrap: wrap;
   background-color: #f8f8f8;
-  padding: 1rem 2rem 3rem;
-  margin-top: 3rem;
+  padding: 1em 2em 3em;
+  margin-top: 3em;
 }
 
 footer div {
-  margin-left: 8em;
+  margin-left: 5%;
 }
 
-footer .description {
+footer .description-footer {
   padding: 2em;
 }
 
-footer .description .desc {
+footer .description-footer .desc {
   margin-bottom: 30px;
   color: #4f5665;
 }
 
-footer .description .copyright {
+footer .description-footer .copyright {
   font-size: 0.8rem;
   color: #afb5c0;
 }
 
 footer div .footer-logo {
-  width: 10em;
-  height: 2.5em;
   margin-bottom: 20px;
 }
 
-footer .product,
-footer .engage,
-footer .socials {
+footer .product-footer,
+footer .engage-footer,
+footer .socials-footer {
   padding: 1em;
 }
 
-footer .product h3,
-footer .engage h3,
-footer .socials h3 {
+footer .product-footer h2,
+footer .engage-footer h2,
+footer .socials-footer h2 {
   margin-bottom: 1.5em;
 }
 
-footer .product a,
-footer .engage a {
+footer .product-footer a,
+footer .engage-footer a {
   display: flex;
-  flex-direction: column;
   margin-bottom: 15px;
   color: #4f5665;
 }
 
-footer .product a:hover,
-footer .engage a:hover {
+footer .product-footer a:hover,
+footer .engage-footer a:hover {
   color: #b2b2b4;
 }
 
-footer .socials a {
+footer .socials-footer a {
   margin-right: 1em;
 }
 
-footer .socials a img {
-  width: 2.5em;
-  height: 2.5em;
+footer .socials-footer a img {
+  border-radius: 50%;
+}
+
+footer .socials-footer a img:hover {
+  background-color: #0b0909;
+  cursor: pointer;
 }
 
 /* Media Queries */
+
 /* Laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 769px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30em;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-logo {
+    width: 50%;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #010101;
+    display: block;
+    margin: 1.5em;
+    padding: 0.5em;
+    font-size: 1.5em;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 5em;
+    font-size: 5%;
+  }
+
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+
+  .navbar .navbar-btn {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 350%;
+    right: -100%;
+    margin-right: 2.5em;
+    width: 25em;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-btn.active {
+    right: 0;
+  }
+
+  .navbar .navbar-btn button {
+    color: #010101;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .profile {
+    justify-content: center;
+  }
+
+  .profile-form {
+    margin-top: 2em;
+    width: 70%;
+  }
+}
+
+/* Mobile Phone */
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container {
+    margin-top: 20%;
+  }
+
+  footer .description-footer .desc {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  footer .product-footer {
+    margin-right: 20%;
+  }
+
+  footer .product-footer,
+  footer .engage-footer,
+  footer .socials-footer {
+    font-size: 1.2rem;
   }
 }

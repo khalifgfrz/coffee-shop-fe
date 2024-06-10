@@ -3,82 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is a simple profile page with detail profile and many more." />
     <title>Profile</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/profile.css" />
+
+    <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
     <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
+    <!-- Navbar Start -->
     <nav class="navbar">
       <a href="#">
-        <img src="/assets/images/navbar-logo.png" alt="navbar-logo" class="navbar-logo" />
+        <img width="195" height="45" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
       </a>
       <div class="navbar-nav">
         <a href="#home">Home</a>
         <a href="#product">Product</a>
       </div>
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
+        <a href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
       </div>
       <div class="navbar-btn">
         <button class="btn-signin">Sign In</button>
         <button class="btn-signup">Sign Up</button>
       </div>
+      <div class="navbar-hamburger">
+        <a href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
     </nav>
+    <!-- Navbar End -->
+
+    <!-- Main Container Start -->
     <main class="container">
-      <header>
-        <h1>Profile</h1>
-      </header>
-      <section id="profile" class="profile">
-        <div class="profile-img">
-          <p class="name">Ghaluh Wizard</p>
-          <p class="email">ghaluhwizz@gmail.com</p>
-          <img src="assets/images/profile-img.png" alt="profile-img" class="image" />
-          <button class="btn-img">Upload New Photo</button>
-          <p class="since">Since 20 January 2024</p>
-        </div>
-        <div class="profile-details">
-          <form>
-            <label for="fullname">Full Name</label>
-            <div>
-              <img src="/assets/images/form-icon.png" alt="name-icon" class="icon" />
-              <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" autocomplete="name" />
+      <!-- Body Start -->
+      <div class="body">
+        <!-- Header Start -->
+        <header>
+          <h1>Profile</h1>
+        </header>
+        <!-- Header End -->
+
+        <!-- Profile Section Start -->
+        <section id="profile" class="profile">
+          <div class="profile-details">
+            <p class="name">Ghaluh Wizard</p>
+            <p class="email">ghaluhwizz@gmail.com</p>
+            <div class="profile-img">
+              <img src="assets/images/profile-img.webp" alt="profile-img" />
             </div>
-            <label for="email">Email</label>
-            <div>
-              <img src="/assets/images/email-icon.png" alt="email-icon" class="icon" />
-              <input type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
-            </div>
-            <label for="phone">Phone</label>
-            <div>
-              <img src="/assets/images/phone-icon.png" alt="phone-icon" class="icon" />
-              <input type="text" name="phone" id="phone" placeholder="Enter Your Phone" autocomplete="off" />
-            </div>
-            <p>Set New Password</p>
-            <label for="password">Password</label>
-            <div>
-              <img src="/assets/images/password-icon.png" alt="password-icon" class="icon" />
-              <input type="password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off" />
-            </div>
-            <label for="address">Address</label>
-            <div>
-              <img src="/assets/images/address-icon.png" alt="address-icon" class="icon" />
-              <input type="text" name="address" id="address" placeholder="Enter Your Address" autocomplete="off" />
-            </div>
-            <button class="btn-submit" type="submit">Submit</button>
-          </form>
-        </div>
-      </section>
+            <button class="btn-upload">Upload New Photo</button>
+            <p class="since">Since 20 January 2024</p>
+          </div>
+          <div class="profile-form">
+            <form>
+              <label for="fullname">Full Name</label>
+              <div>
+                <img width="20" height="20" src="/assets/images/form-icon.svg" alt="name-icon" />
+                <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" autocomplete="name" />
+              </div>
+              <label for="email">Email</label>
+              <div>
+                <img width="20" height="20" src="/assets/images/email-icon.svg" alt="email-icon" />
+                <input type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
+              </div>
+              <label for="phone">Phone</label>
+              <div>
+                <img width="20" height="20" src="/assets/images/phone-icon.svg" alt="phone-icon" />
+                <input type="text" name="phone" id="phone" placeholder="Enter Your Phone" autocomplete="off" />
+              </div>
+              <div class="password">
+                <label for="password">Password</label>
+                <p>Set New Password</p>
+              </div>
+              <div>
+                <img width="20" height="20" src="/assets/images/password-icon.svg" alt="password-icon" />
+                <input type="password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off" />
+              </div>
+              <label for="address">Address</label>
+              <div>
+                <img width="20" height="20" src="/assets/images/address-icon.svg" alt="address-icon" />
+                <input type="text" name="address" id="address" placeholder="Enter Your Address" autocomplete="off" />
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </section>
+        <!-- Profile Section End -->
+      </div>
+      <!-- Body End -->
+
+      <!-- Footer Start -->
       <footer>
-        <div class="description">
-          <img src="assets/images/footer-logo.png" alt="footer-logo" class="footer-logo" />
+        <div class="description-footer">
+          <img width="160" height="40" src="assets/images/footer-logo.webp" alt="footer-logo" class="footer-logo" />
           <p class="desc">
             Coffee Shop is a store that sells some good <br />
             meals, and especially coffee. We provide <br />
@@ -86,32 +117,39 @@
           </p>
           <p class="copyright">&copy; 2024CoffeeStore</p>
         </div>
-        <div class="product">
-          <h3>Product</h3>
+        <div class="product-footer">
+          <h2>Product</h2>
           <a href="#">Our Product</a>
           <a href="#">Pricing</a>
           <a href="#">Locations</a>
           <a href="#">Countries</a>
           <a href="#">Blog</a>
         </div>
-        <div class="engage">
-          <h3>Engage</h3>
+        <div class="engage-footer">
+          <h2>Engage</h2>
           <a href="#">Partner</a>
           <a href="#">FAQ</a>
           <a href="#">About Us</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
         </div>
-        <div class="socials">
-          <h3>Social Media</h3>
-          <a href="#"><img src="assets/images/facebook-icon-orange.png" alt="facebook-icon" /></a>
-          <a href="#"><img src="assets/images/twitter-icon-orange.png" alt="twitter-icon" /></a>
-          <a href="#"><img src="assets/images/instagram-icon-orange.png" alt="instagram-icon" /></a>
+        <div class="socials-footer">
+          <h2>Social Media</h2>
+          <a href="#"><img width="40" height="40" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
+          <a href="#"><img width="40" height="40" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
+          <a href="#"><img width="40" height="40" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
         </div>
       </footer>
+      <!-- Footer End -->
     </main>
+    <!-- Main Container End -->
+
+    <!-- Feather Icons -->
     <script>
       feather.replace();
     </script>
+
+    <!-- Script -->
+    <script src="script/navbar.js"></script>
   </body>
 </html>

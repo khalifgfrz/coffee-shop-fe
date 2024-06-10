@@ -3,95 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is a simple product page with product filter and many more." />
     <title>Product</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/product.css" />
+
+    <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
     <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
+    <!-- Navbar Start -->
     <nav class="navbar">
       <a href="#">
-        <img src="/assets/images/navbar-logo.png" alt="navbar-logo" class="navbar-logo" />
+        <img width="195" height="45" src="/assets/images/navbar-logo.webp" alt="navbar-logo" class="navbar-logo" />
       </a>
       <div class="navbar-nav">
         <a href="#home">Home</a>
         <a href="#product">Product</a>
       </div>
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
+        <a href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
       </div>
       <div class="navbar-btn">
         <button class="btn-signin">Sign In</button>
         <button class="btn-signup">Sign Up</button>
       </div>
+      <div class="navbar-hamburger">
+        <a href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
     </nav>
+    <!-- Navbar End -->
+
+    <!-- Main Container Start -->
     <main class="container">
-      <section class="hero" id="header">
+      <!-- Header Start -->
+      <header id="header" class="header">
         <h1>We Provide Good Coffee and Healthy Meals</h1>
-      </section>
+      </header>
+      <!-- Header End -->
+
+      <!-- Promo Section Start -->
       <section id="promo" class="promo">
         <div class="promo-header">
           <h1>Today <span>Promo</span></h1>
           <div class="btn-promo">
-            <button class="left-button">&#9664;</button>
-            <button class="right-button">&#9654;</button>
+            <button>&#9664;</button>
+            <button>&#9654;</button>
           </div>
         </div>
         <div class="promo-body">
-          <div class="promo-coupon">
+          <div class="promo-coupon-1">
             <div class="promo-img">
-              <img src="assets/images/promo/1.png" alt="promo-img" />
+              <img src="assets/images/promo/1.svg" alt="promo-img" />
             </div>
             <div class="promo-details">
-              <h3>HAPPY MOTHER'S DAY!</h3>
-              <p class="promo-description">Get one of our favorite menu for free!</p>
-              <p class="claim">Klaim Kupon</p>
-            </div>
-          </div>
-          <div class="promo-coupon">
-            <div class="promo-img">
-              <img src="assets/images/promo/1.png" alt="promo-img" />
-            </div>
-            <div class="promo-details">
-              <h3>HAPPY MOTHER'S DAY!</h3>
-              <p class="promo-description">Get one of our favorite menu for free!</p>
-              <p class="claim">Klaim Kupon</p>
-            </div>
-          </div>
-          <div class="promo-coupon">
-            <div class="promo-img">
-              <img src="assets/images/promo/1.png" alt="promo-img" />
-            </div>
-            <div class="promo-details">
-              <h3>HAPPY MOTHER'S DAY!</h3>
+              <h2>HAPPY MOTHER'S DAY!</h2>
               <p class="promo-description">Get one of our favorite menu for free!</p>
               <p class="claim">Klaim Kupon</p>
             </div>
           </div>
           <div class="promo-coupon-2">
             <div class="promo-img">
-              <img src="assets/images/promo/2.png" alt="promo-img" />
+              <img src="assets/images/promo/1.svg" alt="promo-img" />
             </div>
             <div class="promo-details">
-              <h3>Get a cup of coffee for free on sunday morning</h3>
+              <h2>HAPPY MOTHER'S DAY!</h2>
+              <p class="promo-description">Get one of our favorite menu for free!</p>
+              <p class="claim">Klaim Kupon</p>
+            </div>
+          </div>
+          <div class="promo-coupon-3">
+            <div class="promo-img">
+              <img src="assets/images/promo/1.svg" alt="promo-img" />
+            </div>
+            <div class="promo-details">
+              <h2>HAPPY MOTHER'S DAY!</h2>
+              <p class="promo-description">Get one of our favorite menu for free!</p>
+              <p class="claim">Klaim Kupon</p>
+            </div>
+          </div>
+          <div class="promo-coupon-4">
+            <div class="promo-img">
+              <img src="assets/images/promo/2.svg" alt="promo-img" />
+            </div>
+            <div class="promo-details">
+              <h2>Get a cup of coffee for free on sunday morning</h2>
               <p class="promo-description">Only at 7 to 9 AM</p>
             </div>
           </div>
-          <div class="pagination-dots">
-            <div class="dot" data-page="1"></div>
-            <div class="dot" data-page="2"></div>
-            <div class="dot" data-page="3"></div>
-            <div class="dot" data-page="4"></div>
-          </div>
+        </div>
+        <div class="pagination-dots">
+          <div class="dot" data-page="1"></div>
+          <div class="dot" data-page="2"></div>
+          <div class="dot" data-page="3"></div>
+          <div class="dot" data-page="4"></div>
         </div>
       </section>
+      <!-- Promo Section End -->
+
+      <!-- Product Section Start -->
       <section class="product" id="product">
         <h1>Our <span>Product</span></h1>
         <div class="product-body">
@@ -102,14 +125,14 @@
             </div>
             <div class="product-search">
               <form>
-                <label id="search" class="search" for="search">Search</label>
+                <div class="search-name" for="search">Search</div>
                 <div>
-                  <input type="text" name="search" id="search" placeholder="Search Your Product" autocomplete="off" />
+                  <input type="text" name="search" id="search-input" placeholder="Search Your Product" autocomplete="off" />
                 </div>
               </form>
             </div>
             <div class="product-category">
-              <h3>Category</h3>
+              <h2>Category</h2>
               <label class="checkbox" for="favorite-product">
                 <input type="checkbox" id="favorite-product" name="favorite-product" />
                 <div class="checkmark"></div>
@@ -137,7 +160,7 @@
               </label>
             </div>
             <div class="product-sort">
-              <h3>Sort By</h3>
+              <h2>Sort By</h2>
               <label class="checkbox" for="buy1get1">
                 <input type="checkbox" id="buy1get1" name="buy1get1" />
                 <div class="checkmark"></div>
@@ -160,7 +183,7 @@
               </label>
             </div>
             <div class="product-range">
-              <h3>Range Price</h3>
+              <h2>Range Price</h2>
               <div class="range-slider">
                 <div class="range-track"></div>
                 <div class="range-progress" id="range-progress"></div>
@@ -177,117 +200,158 @@
           <div class="product-menu">
             <div class="product-card">
               <div class="menu-card">
-                <p>FLASH SALE!</p>
-                <img src="assets/images/menu/1.png" alt="Hazzlenut Latte" />
-                <div class="menu-details">
-                  <h3>Hazzlenut Latte</h3>
-                  <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-                  <div class="star-rating">
-                    <div class="star" data-value="1">&#9733;</div>
-                    <div class="star" data-value="2">&#9733;</div>
-                    <div class="star" data-value="3">&#9733;</div>
-                    <div class="star" data-value="4">&#9733;</div>
-                    <div class="star" data-value="5">&#9733;</div>
-                    <div class="rating-value">5.0</div>
-                  </div>
-                  <div class="price">
-                    <p class="price-normal">IDR 20.000</p>
-                    <p class="price-discount">IDR 10.000</p>
-                  </div>
-                  <div class="menu-btn">
-                    <button class="btn-buy">Buy</button>
-                    <button class="btn-cart"><i data-feather="shopping-cart"></i></button>
-                  </div>
+                <p class="flash-sale">FLASH SALE!</p>
+                <img src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
+                <h3>Hazzlenut Latte</h3>
+                <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                <div class="star-rating">
+                  <p class="star" data-value="1">&#9733;</p>
+                  <p class="star" data-value="2">&#9733;</p>
+                  <p class="star" data-value="3">&#9733;</p>
+                  <p class="star" data-value="4">&#9733;</p>
+                  <p class="star" data-value="5">&#9733;</p>
+                  <p class="rating-value">5.0</p>
+                </div>
+                <div class="price">
+                  <p class="price-normal">IDR 20.000</p>
+                  <p class="price-discount">IDR 10.000</p>
+                </div>
+                <div class="menu-btn">
+                  <button class="btn-buy">Buy</button>
+                  <button class="btn-cart"><img width="25" height="25" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
                 </div>
               </div>
               <div class="menu-card">
-                <p>FLASH SALE!</p>
-                <img src="assets/images/menu/1.png" alt="Hazzlenut Latte" />
-                <div class="menu-details">
-                  <h3>Hazzlenut Latte</h3>
-                  <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-                  <div class="star-rating">
-                    <div class="star" data-value="1">&#9733;</div>
-                    <div class="star" data-value="2">&#9733;</div>
-                    <div class="star" data-value="3">&#9733;</div>
-                    <div class="star" data-value="4">&#9733;</div>
-                    <div class="star" data-value="5">&#9733;</div>
-                    <div class="rating-value">5.0</div>
-                  </div>
-                  <div class="price">
-                    <p class="price-normal">IDR 20.000</p>
-                    <p class="price-discount">IDR 10.000</p>
-                  </div>
-                  <div class="menu-btn">
-                    <button class="btn-buy">Buy</button>
-                    <button class="btn-cart"><i data-feather="shopping-cart"></i></button>
-                  </div>
+                <p class="flash-sale">FLASH SALE!</p>
+                <img src="assets/images/menu/2.webp" alt="Hazzlenut Latte" />
+                <h3>Hazzlenut Latte</h3>
+                <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                <div class="star-rating">
+                  <div class="star" data-value="1">&#9733;</div>
+                  <div class="star" data-value="2">&#9733;</div>
+                  <div class="star" data-value="3">&#9733;</div>
+                  <div class="star" data-value="4">&#9733;</div>
+                  <div class="star" data-value="5">&#9733;</div>
+                  <div class="rating-value">5.0</div>
+                </div>
+                <div class="price">
+                  <p class="price-normal">IDR 20.000</p>
+                  <p class="price-discount">IDR 10.000</p>
+                </div>
+                <div class="menu-btn">
+                  <button class="btn-buy">Buy</button>
+                  <button class="btn-cart"><img width="25" height="25" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
                 </div>
               </div>
             </div>
             <div class="product-card">
               <div class="menu-card">
-                <p>FLASH SALE!</p>
-                <img src="assets/images/menu/1.png" alt="Hazzlenut Latte" />
-                <div class="menu-details">
-                  <h3>Hazzlenut Latte</h3>
-                  <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-                  <div class="star-rating">
-                    <div class="star" data-value="1">&#9733;</div>
-                    <div class="star" data-value="2">&#9733;</div>
-                    <div class="star" data-value="3">&#9733;</div>
-                    <div class="star" data-value="4">&#9733;</div>
-                    <div class="star" data-value="5">&#9733;</div>
-                    <div class="rating-value">5.0</div>
-                  </div>
-                  <div class="price">
-                    <p class="price-normal">IDR 20.000</p>
-                    <p class="price-discount">IDR 10.000</p>
-                  </div>
-                  <div class="menu-btn">
-                    <button class="btn-buy">Buy</button>
-                    <button class="btn-cart"><i data-feather="shopping-cart"></i></button>
-                  </div>
+                <p class="flash-sale">FLASH SALE!</p>
+                <img src="assets/images/menu/3.webp" alt="Hazzlenut Latte" />
+                <h3>Hazzlenut Latte</h3>
+                <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                <div class="star-rating">
+                  <div class="star" data-value="1">&#9733;</div>
+                  <div class="star" data-value="2">&#9733;</div>
+                  <div class="star" data-value="3">&#9733;</div>
+                  <div class="star" data-value="4">&#9733;</div>
+                  <div class="star" data-value="5">&#9733;</div>
+                  <div class="rating-value">5.0</div>
+                </div>
+                <div class="price">
+                  <p class="price-normal">IDR 20.000</p>
+                  <p class="price-discount">IDR 10.000</p>
+                </div>
+                <div class="menu-btn">
+                  <button class="btn-buy">Buy</button>
+                  <button class="btn-cart"><img width="25" height="25" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
                 </div>
               </div>
               <div class="menu-card">
-                <p>FLASH SALE!</p>
-                <img src="assets/images/menu/1.png" alt="Hazzlenut Latte" />
-                <div class="menu-details">
-                  <h3>Hazzlenut Latte</h3>
-                  <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-                  <div class="star-rating">
-                    <div class="star" data-value="1">&#9733;</div>
-                    <div class="star" data-value="2">&#9733;</div>
-                    <div class="star" data-value="3">&#9733;</div>
-                    <div class="star" data-value="4">&#9733;</div>
-                    <div class="star" data-value="5">&#9733;</div>
-                    <div class="rating-value">5.0</div>
-                  </div>
-                  <div class="price">
-                    <p class="price-normal">IDR 20.000</p>
-                    <p class="price-discount">IDR 10.000</p>
-                  </div>
-                  <div class="menu-btn">
-                    <button class="btn-buy">Buy</button>
-                    <button class="btn-cart"><i data-feather="shopping-cart"></i></button>
-                  </div>
+                <p class="flash-sale">FLASH SALE!</p>
+                <img src="assets/images/menu/4.webp" alt="Hazzlenut Latte" />
+                <h3>Hazzlenut Latte</h3>
+                <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                <div class="star-rating">
+                  <div class="star" data-value="1">&#9733;</div>
+                  <div class="star" data-value="2">&#9733;</div>
+                  <div class="star" data-value="3">&#9733;</div>
+                  <div class="star" data-value="4">&#9733;</div>
+                  <div class="star" data-value="5">&#9733;</div>
+                  <div class="rating-value">5.0</div>
+                </div>
+                <div class="price">
+                  <p class="price-normal">IDR 20.000</p>
+                  <p class="price-discount">IDR 10.000</p>
+                </div>
+                <div class="menu-btn">
+                  <button class="btn-buy">Buy</button>
+                  <button class="btn-cart"><img width="25" height="25" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
                 </div>
               </div>
             </div>
+            <div class="product-card">
+              <div class="menu-card">
+                <p class="flash-sale">FLASH SALE!</p>
+                <img src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
+                <h3>Hazzlenut Latte</h3>
+                <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                <div class="star-rating">
+                  <div class="star" data-value="1">&#9733;</div>
+                  <div class="star" data-value="2">&#9733;</div>
+                  <div class="star" data-value="3">&#9733;</div>
+                  <div class="star" data-value="4">&#9733;</div>
+                  <div class="star" data-value="5">&#9733;</div>
+                  <div class="rating-value">5.0</div>
+                </div>
+                <div class="price">
+                  <p class="price-normal">IDR 20.000</p>
+                  <p class="price-discount">IDR 10.000</p>
+                </div>
+                <div class="menu-btn">
+                  <button class="btn-buy">Buy</button>
+                  <button class="btn-cart"><img width="25" height="25" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
+                </div>
+              </div>
+              <div class="menu-card">
+                <p class="flash-sale">FLASH SALE!</p>
+                <img src="assets/images/menu/2.webp" alt="Hazzlenut Latte" />
+                <h3>Hazzlenut Latte</h3>
+                <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                <div class="star-rating">
+                  <div class="star" data-value="1">&#9733;</div>
+                  <div class="star" data-value="2">&#9733;</div>
+                  <div class="star" data-value="3">&#9733;</div>
+                  <div class="star" data-value="4">&#9733;</div>
+                  <div class="star" data-value="5">&#9733;</div>
+                  <div class="rating-value">5.0</div>
+                </div>
+                <div class="price">
+                  <p class="price-normal">IDR 20.000</p>
+                  <p class="price-discount">IDR 10.000</p>
+                </div>
+                <div class="menu-btn">
+                  <button class="btn-buy">Buy</button>
+                  <button class="btn-cart"><img width="25" height="25" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
+                </div>
+              </div>
+            </div>
+            <div class="btn-page">
+              <button class="page-1">1</button>
+              <button class="page-2">2</button>
+              <button class="page-3">3</button>
+              <button class="page-4">4</button>
+              <button class="right-button">&#9654;</button>
+            </div>
           </div>
         </div>
-        <div class="btn-page">
-          <button class="page-1">1</button>
-          <button class="page-2">2</button>
-          <button class="page-3">3</button>
-          <button class="page-4">4</button>
-          <button class="right-button">&#9654;</button>
-        </div>
       </section>
+      <!-- Product Section End -->
+
+      <!-- Footer Start -->
       <footer>
-        <div class="description">
-          <img src="assets/images/footer-logo.png" alt="footer-logo" class="footer-logo" />
+        <div class="description-footer">
+          <img src="assets/images/footer-logo.webp" alt="footer-logo" class="footer-logo" />
           <p class="desc">
             Coffee Shop is a store that sells some good <br />
             meals, and especially coffee. We provide <br />
@@ -295,62 +359,40 @@
           </p>
           <p class="copyright">&copy; 2024CoffeeStore</p>
         </div>
-        <div class="product">
-          <h3>Product</h3>
+        <div class="product-footer">
+          <h2>Product</h2>
           <a href="#">Our Product</a>
           <a href="#">Pricing</a>
           <a href="#">Locations</a>
           <a href="#">Countries</a>
           <a href="#">Blog</a>
         </div>
-        <div class="engage">
-          <h3>Engage</h3>
+        <div class="engage-footer">
+          <h2>Engage</h2>
           <a href="#">Partner</a>
           <a href="#">FAQ</a>
           <a href="#">About Us</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
         </div>
-        <div class="socials">
-          <h3>Social Media</h3>
-          <a href="#"><img src="assets/images/facebook-icon-orange.png" alt="facebook-icon" /></a>
-          <a href="#"><img src="assets/images/twitter-icon-orange.png" alt="twitter-icon" /></a>
-          <a href="#"><img src="assets/images/instagram-icon-orange.png" alt="instagram-icon" /></a>
+        <div class="socials-footer">
+          <h2>Social Media</h2>
+          <a href="#"><img width="40" height="40" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
+          <a href="#"><img width="40" height="40" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
+          <a href="#"><img width="40" height="40" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
         </div>
       </footer>
+      <!-- Footer End -->
     </main>
+    <!-- Main Container End -->
+
+    <!-- Feather Icons -->
     <script>
-      const minPriceRange = document.getElementById("min-price-range");
-      const maxPriceRange = document.getElementById("max-price-range");
-      const minPriceValue = document.getElementById("min-price-value");
-      const maxPriceValue = document.getElementById("max-price-value");
-      const rangeProgress = document.getElementById("range-progress");
-
-      function updateProgress() {
-        const min = parseInt(minPriceRange.value);
-        const max = parseInt(maxPriceRange.value);
-        if (min > max - 10) {
-          minPriceRange.value = max - 10;
-        }
-        if (max < min + 10) {
-          maxPriceRange.value = min + 10;
-        }
-        minPriceValue.textContent = `Idr.${minPriceRange.value}`;
-        maxPriceValue.textContent = `Idr.${maxPriceRange.value}`;
-        rangeProgress.style.left = `${(min / 1000) * 100}%`;
-        rangeProgress.style.right = `${100 - (max / 1000) * 100}%`;
-
-        // Update the position of the price labels
-        minPriceValue.style.left = `${(min / 1000) * 100}%`;
-        maxPriceValue.style.left = `${(max / 1000) * 100}%`;
-      }
-
-      minPriceRange.addEventListener("input", updateProgress);
-      maxPriceRange.addEventListener("input", updateProgress);
-
-      // Initial update
-      updateProgress();
       feather.replace();
     </script>
+
+    <!-- Script -->
+    <script src="script/navbar.js"></script>
+    <script src="script/range.js"></script>
   </body>
 </html>

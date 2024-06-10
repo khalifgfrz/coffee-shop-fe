@@ -3,66 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is a simple register form with background and many more." />
     <title>Register</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/register.css" />
+
+    <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
     <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <!-- Main Container Start -->
     <main class="container">
-      <header>
-        <img src="/assets/images/header-logo.png" alt="header-logo" />
-        <h2 class="header">Register</h2>
-        <p class="subheader">Fill out the form correctly</p>
+      <!-- Header Start -->
+      <header id="header" class="header">
+        <img src="/assets/images/header-logo.webp" alt="header-logo" />
+        <h2>Register</h2>
+        <p>Fill out the form correctly</p>
       </header>
-      <section>
-        <!-- register form -->
+      <!-- Header End -->
+
+      <!-- Register Form Section Start -->
+      <section id="register-form" class="register-form">
         <form>
           <label for="fullname">Full Name</label>
           <div>
-            <img src="/assets/images/form-icon.png" alt="name-icon" class="icon" />
+            <img width="20" height="20" src="/assets/images/form-icon.svg" alt="name-icon" />
             <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" autocomplete="name" />
           </div>
           <label for="email">Email</label>
           <div>
-            <img src="/assets/images/email-icon.png" alt="email-icon" class="icon" />
+            <img width="20" height="20" src="/assets/images/email-icon.svg" alt="email-icon"" />
             <input type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
           </div>
           <label for="password">Password</label>
           <div>
-            <img src="/assets/images/password-icon.png" alt="password-icon" class="icon" />
+            <img width="20" height="20" src="/assets/images/password-icon.svg" alt="password-icon" />
             <input type="password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off" />
           </div>
           <label for="confirmpassword">Confirm Password</label>
           <div>
-            <img src="/assets/images/password-icon.png" alt="confirmpassword-icon" class="icon" />
+            <img width="20" height="20" src="/assets/images/password-icon.svg" alt="confirmpassword-icon" />
             <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Enter Your Password Again" autocomplete="off" />
           </div>
-          <button class="btn-register" type="submit">Register</button>
-          <p class="login">Have An Account? <a class="loginhref" href="login.html">Login</a></p>
+          <button type="submit">Register</button>
+          <p>Have An Account? <a class="loginhref" href="login.html">Login</a></p>
         </form>
       </section>
-      <section>
-        <!-- sign up option -->
-        <p class="or">Or</p>
-        <div>
+      <!-- Register Form Section End -->
+
+      <!-- Sign Up Option Section Start -->
+      <section id="sign-up-option" class="sign-up-option">
+        <p>Or</p>
+        <div class="sign-up-option-btn">
           <button class="btn-facebook">
-            <div>
-              <img src="/assets/images/facebook-icon.png" alt="facebook-icon" class="facebook-icon" />
-              <span class="facebook-text">Facebook</span>
+            <div class="btn-facebook-details">
+              <img width="20" height="20" src="/assets/images/facebook-icon.svg" alt="facebook-icon" class="facebook-icon" />
+              <div class="facebook-text">Facebook</div>
             </div>
           </button>
           <button class="btn-google">
-            <img src="/assets/images/google-icon.png" alt="google-icon" class="google-icon" />
-            <span class="google-text">Google</span>
+            <div class="btn-google-details">
+              <img width="20" height="20" src="/assets/images/google-icon.svg" alt="google-icon" class="google-icon" />
+              <div class="google-text">Google</div>
+            </div>
           </button>
         </div>
       </section>
+      <!-- Sign Up Option Section End -->
     </main>
+    <!-- Main Container End -->
   </body>
 </html>

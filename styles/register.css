@@ -1,4 +1,4 @@
-/* normalisasi style */
+/* Normalisasi style */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  outline: 1px solid red;
 }
 
 html {
@@ -14,45 +13,44 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-image: url("/assets/images/background-register.png");
+  background-image: url("/assets/images/background-register.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  margin-top: 30px;
-  margin-right: 0;
-  margin-left: 350px;
   background-position: center;
 }
 
 .container {
-  background-color: transparent;
+  background-color: #ffffff;
+  width: 60%;
+  margin-top: 30px;
+  margin-left: 35%;
+  padding: 2em;
 }
 
-.header {
+.header h2 {
   color: #8e6447;
   margin-top: 30px;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.6rem;
 }
 
-.subheader {
+.header p {
   color: #4f5665;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.3rem;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.header img {
+  width: 20%;
 }
 
 form label {
   color: #0b132a;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
 form div {
@@ -61,50 +59,48 @@ form div {
 }
 
 form div input {
-  width: 60em;
+  width: 100%;
   height: 50px;
   outline: 0;
-  border: 2px solid;
+  border: 1px solid #dedede;
   border-radius: 10px;
   padding-top: 2px;
   padding-left: 60px;
   background: transparent;
-  font-size: 15px;
+  font-size: 1rem;
   color: #4f5665;
   margin-bottom: 20px;
 }
 
-.icon {
+form div img {
   position: absolute;
-  margin-top: 10px;
-  margin-left: 15px;
-  width: 33px;
-  height: 33px;
+  margin-top: 16px;
+  margin-left: 20px;
 }
 
-.btn-register {
+.register-form form button {
   margin-top: 10px;
   color: #0b132a;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 1.3rem;
   background-color: #ff8906;
   border-radius: 10px;
   border: none;
-  width: 60em;
+  width: 100%;
   height: 45px;
   cursor: pointer;
 }
 
-.btn-register:hover {
+.register-form form button:hover {
   background-color: #e77d04;
   cursor: pointer;
 }
 
-.login {
+.register-form form p {
+  text-align: center;
   color: #4f5665;
   font-weight: 400;
-  font-size: 18px;
-  margin-left: 350px;
+  font-size: 1.15rem;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -119,23 +115,29 @@ a:hover {
   text-decoration: underline;
 }
 
-.or {
+.sign-up-option p {
+  text-align: center;
   font-weight: 400;
-  font-size: 13px;
-  margin-left: 445px;
+  font-size: 0.9rem;
   color: #aaaaaa;
 }
 
-.btn-facebook {
+.sign-up-option-btn {
   margin-top: 30px;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-facebook {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #4f5665;
   background-color: #ffffff;
   border-radius: 10px;
   border: none;
+  width: 40%;
+  height: 3em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 440px;
-  height: 70px;
 }
 
 .btn-facebook:hover {
@@ -144,28 +146,24 @@ a:hover {
 }
 
 .facebook-text {
-  margin-left: 20px;
-  font-weight: 400;
-  font-size: 20px;
-  color: #4f5665;
+  margin-left: 2em;
 }
 
-.facebook-icon {
-  width: 20px;
-  height: 20px;
+.btn-facebook-details {
+  display: flex;
+  justify-content: center;
 }
 
 .btn-google {
-  margin-top: 30px;
-  margin-left: 20px;
-  align-items: center;
-  justify-content: center;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #4f5665;
   background-color: #ffffff;
   border-radius: 10px;
   border: none;
+  width: 40%;
+  height: 3em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 440px;
-  height: 70px;
 }
 
 .btn-google:hover {
@@ -174,21 +172,95 @@ a:hover {
 }
 
 .google-text {
-  margin-left: 20px;
-  font-weight: 400;
-  font-size: 20px;
-  color: #4f5665;
+  margin-left: 2em;
 }
 
-.google-icon {
-  width: 20px;
-  height: 20px;
+.btn-google-details {
+  display: flex;
+  justify-content: center;
 }
 
 /* Media Queries */
+
 /* Laptop */
-@media (max-width: 1366px) {
+@media screen and (max-width: 1366px) {
   html {
     font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 769px) {
+  html {
+    font-size: 68%;
+  }
+  body {
+    background-image: none;
+  }
+  .container {
+    margin-left: 20%;
+  }
+
+  .header h2 {
+    margin-top: 1em;
+  }
+
+  .header img {
+    width: 35%;
+  }
+
+  .header p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  form div input {
+    font-size: 1.2rem;
+  }
+
+  form div img {
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .register-form form button {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .register-form form p {
+    font-size: 1.4rem;
+  }
+
+  .sign-up-option-btn {
+    justify-content: space-around;
+  }
+
+  .btn-facebook {
+    border-radius: 0;
+    width: 5em;
+    height: 5em;
+  }
+
+  .facebook-text {
+    display: none;
+  }
+
+  .btn-google {
+    border-radius: 0;
+    width: 5em;
+    height: 5em;
+  }
+  .google-text {
+    display: none;
+  }
+}
+
+/* Mobile Phone */
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 55%;
   }
 }
