@@ -19,126 +19,175 @@
   </head>
   <body>
     <!-- Navbar Start -->
-    <nav class="flex justify-between items-center bg-black fixed py-[0.5%] px-[10%] top-0 left-0 right-0 z-50">
+    <nav class="flex justify-between items-center bg-black fixed py-[2%] tbt:py-[0.5%] px-[10%] top-0 left-0 right-0 z-50">
       <div class="flex items-center">
         <div class="mr-16">
           <a href="#">
-            <img href="#" width="180" height="45" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
+            <img href="#" width="90" height="22.5" class="tbt:w-44 tbt:h-11" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
           </a>
         </div>
-        <div>
-          <a class="mr-16 inline-block text-white hover:underline" href="#home">Home</a>
-          <a class="mr-16 inline-block text-white hover:underline" href="#product">Product</a>
+        <div class="hidden md:flex">
+          <a class="mr-16 text-white hover:underline" href="#home">Home</a>
+          <a class="mr-16 text-white hover:underline" href="#product">Product</a>
         </div>
       </div>
       <div class="flex justify-center items-center">
-        <a href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
-        <a href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <div>
+        <a class="hidden md:flex md:mr-6" href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
+        <a class="mr-6" href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <div class="hidden md:flex">
           <button class="bg-black border border-solid border-white rounded text-white w-24 h-12 mr-8 hover:bg-lightblack">Sign In</button>
           <button class="bg-primary rounded w-24 h-12 hover:bg-darkprimary">Sign Up</button>
         </div>
-        <a class="hidden" href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
+        <a class="md:hidden" href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
     <!-- Navbar End -->
 
-    <main class="mt-[10%]">
+    <main class="mt-[20%] tbt:mt-[10%]">
       <div class="px-[10%]">
         <header>
-          <h1 class="text-4xl font-bold font-jakarta">Payment Details</h1>
+          <h1 class="font-bold font-jakarta text-xl md:text-4xl">Payment Details</h1>
         </header>
-        <div class="flex justify-between flex-wrap mt-10">
-          <div class="w-1/2 mr-1">
+        <div class="inline-block mt-10 tbt:flex tbt:justify-between tbt:flex-wrap">
+          <div class="tbt:w-1/2 tbt:mr-1">
             <div class="flex justify-between items-center">
-              <h2 class="font-jakarta text-2xl font-medium">Your Order</h2>
-              <button class="font-jakarta bg-primary rounded w-24 h-11">
+              <h2 class="font-jakarta font-semibold md:text-2xl">Your Order</h2>
+              <button class="font-jakarta bg-primary rounded md:w-24 md:h-11">
                 <div class="flex justify-center items-center">
-                  <p class="text-2xl mr-2">+</p>
-                  <p class="text-sm">Add Menu</p>
+                  <p class="text-xl md:text-2xl mr-2">+</p>
+                  <p class="text-xs md:text-sm">Add Menu</p>
                 </div>
               </button>
             </div>
             <div class="flex bg-gray-50 mt-3 p-3 justify-between">
-              <div class="mr-5">
+              <div class="flex mr-2 justify-center items-center">
                 <img width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
               </div>
-              <div class="w-4/5">
-                <p class="font-jakarta text-xs text-center p-1.5 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
-                <p class="font-jakarta text-lg font-bold mb-3">Hazzlenut Latte</p>
-                <p class="font-jakarta text-lightgrey mb-3">2pcs | Reguler | Ice | Dine In</p>
+              <div class="w-3/5 pr-5">
+                <p class="font-jakarta text-xs text-center p-1 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
+                <p class="font-jakarta font-bold mb-3 text-sm md:text-lg">Hazzlenut Latte</p>
+                <p class="font-jakarta text-lightgrey mb-3 text-xs md:text-base">2pcs | Reguler | Ice | Dine In</p>
                 <div class="flex">
-                  <p class="font-jakarta text-red-600 text-sm line-through mr-2">IDR40.000</p>
-                  <p class="font-jakarta text-primary text-xl">IDR20.000</p>
+                  <p class="font-jakarta text-red-600 text-xs md:text-sm line-through mr-2">IDR40.000</p>
+                  <p class="font-jakarta text-primary text-sm md:text-xl">IDR20.000</p>
                 </div>
               </div>
-              <div class="flex justify-center items-center">
-                <button><img src="assets/images/cancel.svg" alt="cancel" /></button>
-              </div>
+              <button class="w-16 h-4 xsm:w-7 xsm:h-7"><img src="assets/images/cancel.svg" alt="cancel" /></button>
             </div>
-            <div class="flex bg-gray-50 mt-3 p-3 mb-10 justify-between">
-              <div class="mr-5">
+            <div class="flex bg-gray-50 mt-3 p-3 justify-between">
+              <div class="flex mr-2 justify-center items-center">
                 <img width="150" height="150" src="assets/images/menu/4.webp" alt="menu2" />
               </div>
-              <div class="w-4/5">
-                <p class="font-jakarta text-xs text-center p-1.5 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
-                <p class="font-jakarta text-lg font-bold mb-3">Hazzlenut Latte</p>
-                <p class="font-jakarta text-lightgrey mb-3">2pcs | Reguler | Ice | Dine In</p>
+              <div class="w-3/5 pr-5">
+                <p class="font-jakarta text-xs text-center p-1 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
+                <p class="font-jakarta font-bold mb-3 text-sm md:text-lg">Hazzlenut Latte</p>
+                <p class="font-jakarta text-lightgrey mb-3 text-xs md:text-base">2pcs | Reguler | Ice | Dine In</p>
                 <div class="flex">
-                  <p class="font-jakarta text-red-600 text-sm line-through mr-2">IDR40.000</p>
-                  <p class="font-jakarta text-primary text-xl">IDR20.000</p>
+                  <p class="font-jakarta text-red-600 text-xs md:text-sm line-through mr-2">IDR40.000</p>
+                  <p class="font-jakarta text-primary text-sm md:text-xl">IDR20.000</p>
                 </div>
               </div>
-              <div class="flex justify-center items-center pr-4">
-                <button><img src="assets/images/cancel.svg" alt="cancel" /></button>
-              </div>
+              <button class="w-16 h-4 xsm:w-7 xsm:h-7"><img src="assets/images/cancel.svg" alt="cancel" /></button>
             </div>
-            <div>
-              <h2 class="font-jakarta text-2xl font-medium">Payment Info & Delivery</h2>
+            <div class="mt-7">
+              <h2 class="font-jakarta font-semibold md:text-2xl">Payment Info & Delivery</h2>
               <form class="mt-7">
-                <label class="text-lightblack2 font-semibold text-xl" for="email">Email</label>
+                <label class="text-lightblack2 font-semibold md:text-xl" for="email">Email</label>
                 <div class="relative mt-2">
                   <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/email-icon.svg" alt="email-icon" />
                   <input class="input" type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
                 </div>
-                <label class="text-lightblack2 font-semibold text-xl" for="fullname">Full Name</label>
+                <label class="text-lightblack2 font-semibold md:text-xl" for="fullname">Full Name</label>
                 <div class="relative mt-2">
                   <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/form-icon.svg" alt="name-icon" />
                   <input class="input" type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" autocomplete="name" />
                 </div>
-                <label class="text-lightblack2 font-semibold text-xl" for="address">Address</label>
+                <label class="text-lightblack2 font-semibold md:text-xl" for="address">Address</label>
                 <div class="relative mt-2">
                   <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/address-icon.svg" alt="address-icon" />
                   <input class="input" type="text" name="address" id="address" placeholder="Enter Your Address" autocomplete="off" />
                 </div>
               </form>
+              <h2 class="text-lightblack2 font-semibold md:text-xl">Delivery</h2>
+              <div class="flex justify-between mt-3">
+                <button class="w-1/4 h-10 border border-solid border-darkwhite rounded-xl text-lightgrey hover:border-primary text-sm md:text-base">Dine In</button>
+                <button class="w-1/4 h-10 border border-solid border-darkwhite rounded-xl text-lightgrey hover:border-primary text-xs md:text-base">Door Delivery</button>
+                <button class="w-1/4 h-10 border border-solid border-darkwhite rounded-xl text-lightgrey hover:border-primary text-sm md:text-base">Pick Up</button>
+              </div>
             </div>
           </div>
-          <div class="mt-2 w-2/5">
-            <h2 class="font-jakarta text-2xl font-medium">Total</h2>
-            <div class="mt-4 bg-gray-50 p-2">
+          <div class="mt-5 tbt:mt-2 tbt:w-2/5">
+            <h2 class="font-jakarta md:text-2xl font-semibold">Total</h2>
+            <div class="mt-4 bg-gray-50 px-10 py-5">
               <div class="flex mb-2 font-bold justify-between font-jakarta w-full">
-                <p>Order</p>
-                <p>Idr. 40.000</p>
+                <p class="text-xs md:text-base">Order</p>
+                <p class="text-xs md:text-base">Idr. 40.000</p>
               </div>
               <div class="flex mb-2 font-bold justify-between font-jakarta w-full">
-                <p>Delivery</p>
-                <p>Idr. 0</p>
+                <p class="text-xs md:text-base">Delivery</p>
+                <p class="text-xs md:text-base" class="text-xs md:text-base">Idr. 0</p>
               </div>
               <div class="flex mb-2 font-bold justify-between font-jakarta w-full border-b">
-                <p>Tax</p>
-                <p>Idr. 4000</p>
+                <p class="text-xs md:text-base">Tax</p>
+                <p class="text-xs md:text-base">Idr. 4000</p>
               </div>
               <div class="flex mt-5 mb-5 font-bold justify-between font-jakarta w-full">
-                <p>Subtotal</p>
-                <p>Idr. 44.000</p>
+                <p class="text-xs md:text-base">Subtotal</p>
+                <p class="text-xs md:text-base">Idr. 44.000</p>
               </div>
-              <button class="w-full h-11 bg-primary font-semibold rounded-xl">Checkout</button>
-              <p class="mt-3 text-lightgrey">We Accept</p>
+              <button class="w-full h-9 bg-primary font-semibold rounded-xl">Checkout</button>
+              <p class="mt-3 text-lightgrey text-sm md:text-base">We Accept</p>
+              <div class="flex justify-between mt-3">
+                <img width="20" height="20" src="assets/images/bri-logo.svg" alt="bri-logo" />
+                <img width="20" height="20" src="assets/images/dana-logo.svg" alt="dana-logo" />
+                <img width="20" height="20" src="assets/images/bca-logo.svg" alt="bca-logo" />
+                <img width="20" height="20" src="assets/images/gopay-logo.svg" alt="gopay-logo" />
+                <img width="20" height="20" src="assets/images/ovo-logo.svg" alt="ovo-logo" />
+                <img width="20" height="20" src="assets/images/paypal-logo.svg" alt="paypal-logo" />
+              </div>
+              <p class="mt-3 text-lightgrey text-xs md:text-base">*Get Discount if you pay with Bank Central Asia</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Footer Start -->
+      <footer class="flex flex-wrap bg-darkgrey justify-between py-[1%] px-[10%] mt-12">
+        <div class="py-8">
+          <img class="mb-4 tbt:w-40 tbt:h-10" width="80" height="20" src="assets/images/footer-logo.webp" alt="footer-logo" />
+          <p class="mb-7 text-lightgrey text-sm tbt:text-base">
+            Coffee Shop is a store that sells some good <br />
+            meals, and especially coffee. We provide <br />
+            high quality beans
+          </p>
+          <p class="text-lightgrey2 text-xs tbt:text-sm">&copy; 2024CoffeeStore</p>
+        </div>
+        <div class="py-4 mr-[20%] tbt:mr-0">
+          <h2 class="mb-6 font-bold text-sm tbt:text-base">Product</h2>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Our Product</a>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Pricing</a>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Locations</a>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Countries</a>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Blog</a>
+        </div>
+        <div class="py-4">
+          <h2 class="mb-6 font-bold text-sm tbt:text-base">Engage</h2>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Partner</a>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">FAQ</a>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">About Us</a>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Privacy Policy</a>
+          <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Terms of Service</a>
+        </div>
+        <div class="py-4 h-1/2">
+          <h2 class="mb-6 font-bold text-sm tbt:text-base">Social Media</h2>
+          <div class="flex">
+            <a class="mr-4" href="#"><img class="rounded-full hover:bg-black" width="30" height="30" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
+            <a class="mr-4" href="#"><img class="rounded-full hover:bg-black" width="30" height="30" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
+            <a href="#"><img class="rounded-full hover:bg-black" width="30" height="30" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End -->
     </main>
 
     <!-- Feather Icons -->
