@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* default style per elemen */
+/* @layer base {
+} */
+
+/* untuk bikin utility class baru */
+/* @layer utilities {
+} */
+
+/* untuk bikin component class */
+@layer components {
+  .feather {
+    @apply text-center w-6 h-6 text-white mr-6  hover:text-primary;
+  }
+
+  .input {
+    @apply w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgrey mb-3;
+  }
+}
