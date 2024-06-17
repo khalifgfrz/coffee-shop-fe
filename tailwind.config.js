@@ -26,6 +26,8 @@ const tailwindConfig = {
         lightgrey2: "#afb5c0",
         darkgrey: "#f8f8f8",
         darkwhite: "#dedede",
+        green: "#00A700",
+        greenbg: "#C9E6C9",
       },
       padding: {
         "0.5%": "0.5%",
@@ -39,6 +41,7 @@ const tailwindConfig = {
       },
       inset: {
         "-100%": "-100%",
+        "-200%": "-200%",
       },
       width: {
         "30rem": "30rem",

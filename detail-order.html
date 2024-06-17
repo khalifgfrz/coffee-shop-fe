@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Order</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
+    <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="flex justify-between items-center bg-black fixed py-[2%] tbt:py-[0.5%] px-[10%] top-0 left-0 right-0 z-50">
+        <div class="flex items-center">
+          <div class="mr-16">
+            <a href="#">
+              <img href="#" width="90" height="22.5" class="tbt:w-44 tbt:h-11" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
+            </a>
+          </div>
+          <div class="hidden md:flex">
+            <a class="mr-16 text-white hover:underline" href="#home">Home</a>
+            <a class="mr-16 text-white hover:underline" href="#product">Product</a>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <a class="hidden md:flex md:mr-6" href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
+          <a class="mr-6" href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+          <div class="hidden md:flex">
+            <button class="bg-black border border-solid border-white rounded text-white w-24 h-12 mr-8 hover:bg-lightblack">Sign In</button>
+            <button class="bg-primary rounded w-24 h-12 hover:bg-darkprimary">Sign Up</button>
+          </div>
+          <a class="md:hidden" href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <main class="mt-[20%] tbt:mt-[10%]">
+        <section class="px-[10%]">
+            <header>
+              <h1 class="font-bold font-jakarta text-xl md:text-4xl">Order #12354-09893</h1>
+            </header>
+            <p class="mt-2 text-lightgrey text-xs">21 March 2024 at 10.30 AM</p>
+            <div class="inline-block mt-2 tbt:flex tbt:justify-between tbt:flex-wrap">
+              <div class="mt-5 tbt:mt-2 tbt:w-2/5">
+                  <h2 class="font-jakarta md:text-2xl font-semibold">Order Information</h2>
+                  <div class="mt-4">
+                    <div class="flex mb-3 font-bold justify-between font-jakarta w-full border-b pb-3">
+                      <div class="flex">
+                          <img class="flex mr-1" width="15" height="15" src="/assets/images/form-icon.svg" alt="name-icon" />
+                          <p class="text-xs font-medium text-lightgrey md:text-base">Full Name</p>
+                      </div>
+                      <p class="text-xs md:text-base">Ghaluh Wizard Anggoro</p>
+                    </div>
+                    <div class="flex mb-3 font-bold justify-between font-jakarta w-full border-b pb-3">
+                      <div class="flex">
+                          <img class="flex mr-1" width="15" height="15" src="/assets/images/address-icon.svg" alt="name-icon" />
+                          <p class="text-xs font-medium text-lightgrey md:text-base">Address</p>
+                      </div>
+                      <p class="text-xs md:text-base">Griya Bandung Indah</p>
+                    </div>
+                    <div class="flex mb-3 font-bold justify-between font-jakarta w-full border-b pb-3">
+                      <div class="flex">
+                          <img class="flex mr-1" width="15" height="15" src="/assets/images/phone-icon.svg" alt="name-icon" />
+                          <p class="text-xs font-medium text-lightgrey md:text-base">Phone</p>
+                      </div>
+                      <p class="text-xs md:text-base">082116304338</p>
+                    </div>
+                    <div class="flex mb-3 font-bold justify-between font-jakarta w-full border-b pb-3">
+                      <div class="flex">
+                          <img class="flex mr-1" width="15" height="15" src="/assets/images/payment-icon.svg" alt="name-icon" />
+                          <p class="text-xs font-medium text-lightgrey md:text-base">Payment Method</p>
+                      </div>
+                      <p class="text-xs md:text-base">Cash</p>
+                    </div>
+                    <div class="flex mb-3 font-bold justify-between font-jakarta w-full border-b pb-3">
+                      <div class="flex">
+                          <img class="flex mr-1" width="15" height="15" src="/assets/images/shipping-icon.svg" alt="name-icon" />
+                          <p class="text-xs font-medium text-lightgrey md:text-base">Shipping</p>
+                      </div>
+                      <p class="text-xs md:text-base">Dine In</p>
+                    </div>
+                    <div class="flex mb-3 font-bold justify-between font-jakarta w-full border-b pb-3">
+                      <div class="flex">
+                          <img class="flex mr-1" width="15" height="15" src="/assets/images/status-icon.svg" alt="name-icon" />
+                          <p class="text-xs font-medium text-lightgrey md:text-base">Status</p>
+                      </div>
+                      <p class="text-center py-0.5 px-2 rounded-2xl text-green bg-greenbg text-xs md:text-base">Done</p>
+                    </div>
+                    <div class="flex mb-3 font-bold justify-between font-jakarta w-full">
+                        <p class="text-xs font-medium text-lightgrey md:text-base">Total Transaksi</p>
+                      <p class="text-primary text-xs md:text-base">Idr 40.000</p>
+                    </div>
+                  </div>
+                </div>
+              <div class="mt-10 tbt:mt-0 tbt:w-1/2 tbt:mr-1">
+                  <h2 class="font-jakarta font-semibold md:text-2xl">Your Order</h2>
+                <div class="flex bg-gray-50 mt-3 p-3 justify-between">
+                  <div class="flex mr-2 justify-center items-center">
+                    <img width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
+                  </div>
+                  <div class="w-3/5 pr-5">
+                    <p class="font-jakarta text-xs text-center p-1 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
+                    <p class="font-jakarta font-bold mb-3 text-sm md:text-lg">Hazzlenut Latte</p>
+                    <p class="font-jakarta text-lightgrey mb-3 text-xs md:text-base">2pcs | Reguler | Ice | Dine In</p>
+                    <div class="flex">
+                      <p class="font-jakarta text-red-600 text-xs md:text-sm line-through mr-2">IDR40.000</p>
+                      <p class="font-jakarta text-primary text-sm md:text-xl">IDR20.000</p>
+                    </div>
+                  </div>
+                  <button class="w-16 h-4 xsm:w-7 xsm:h-7"><img src="assets/images/cancel.svg" alt="cancel" /></button>
+                </div>
+                <div class="flex bg-gray-50 mt-3 p-3 justify-between">
+                  <div class="flex mr-2 justify-center items-center">
+                    <img width="150" height="150" src="assets/images/menu/4.webp" alt="menu2" />
+                  </div>
+                  <div class="w-3/5 pr-5">
+                    <p class="font-jakarta text-xs text-center p-1 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
+                    <p class="font-jakarta font-bold mb-3 text-sm md:text-lg">Hazzlenut Latte</p>
+                    <p class="font-jakarta text-lightgrey mb-3 text-xs md:text-base">2pcs | Reguler | Ice | Dine In</p>
+                    <div class="flex">
+                      <p class="font-jakarta text-red-600 text-xs md:text-sm line-through mr-2">IDR40.000</p>
+                      <p class="font-jakarta text-primary text-sm md:text-xl">IDR20.000</p>
+                    </div>
+                  </div>
+                  <button class="w-16 h-4 xsm:w-7 xsm:h-7"><img src="assets/images/cancel.svg" alt="cancel" /></button>
+                </div>
+              </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Start -->
+    <footer class="flex flex-wrap bg-darkgrey justify-between py-[1%] px-[10%] mt-12">
+      <div class="py-8">
+        <img class="mb-4 tbt:w-40 tbt:h-10" width="80" height="20" src="assets/images/footer-logo.webp" alt="footer-logo" />
+        <p class="mb-7 text-lightgrey text-sm tbt:text-base">
+          Coffee Shop is a store that sells some good <br />
+          meals, and especially coffee. We provide <br />
+          high quality beans
+        </p>
+        <p class="text-lightgrey2 text-xs tbt:text-sm">&copy; 2024CoffeeStore</p>
+      </div>
+      <div class="py-4 mr-[20%] tbt:mr-0">
+        <h2 class="mb-6 font-bold text-sm tbt:text-base">Product</h2>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Our Product</a>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Pricing</a>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Locations</a>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Countries</a>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Blog</a>
+      </div>
+      <div class="py-4">
+        <h2 class="mb-6 font-bold text-sm tbt:text-base">Engage</h2>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Partner</a>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">FAQ</a>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">About Us</a>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Privacy Policy</a>
+        <a class="flex mb-4 text-lightgrey text-sm tbt:text-base" href="#">Terms of Service</a>
+      </div>
+      <div class="py-4 h-1/2">
+        <h2 class="mb-6 font-bold text-sm tbt:text-base">Social Media</h2>
+        <div class="flex">
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-black" width="30" height="30" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-black" width="30" height="30" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
+          <a href="#"><img class="rounded-full hover:bg-black" width="30" height="30" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+      <!-- Feather Icons -->
+    <script>
+        feather.replace();
+      </script>
+</body>
+</html>
