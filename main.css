@@ -17,6 +17,6 @@
   }
 
   .input {
-    @apply w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgrey mb-3 text-xs md:text-sm;
+    @apply w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs md:text-sm;
   }
 }
