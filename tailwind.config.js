@@ -13,12 +13,18 @@ const tailwindConfig = {
       uw: "2041px",
     },
     extend: {
+      content: {
+        primary: "",
+      },
       fontFamily: {
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
         primary: "#ff8906",
         darkprimary: "#e77d04",
+        darkprimary2: "#EF8001",
+        lightprimary: "#FFE5C8",
+        secondary: "#a0a3bd",
         black: "#0b0909",
         lightblack: "#353030",
         lightblack2: "#0b132a",
@@ -27,6 +33,7 @@ const tailwindConfig = {
         darkgray: "#f8f8f8",
         darkgray2: "#E8E8E8",
         darkwhite: "#dedede",
+        darkwhite2: "#f3f3f3",
         green: "#00A700",
         greenbg: "#C9E6C9",
       },
@@ -37,7 +44,10 @@ const tailwindConfig = {
         "10%": "10%",
       },
       margin: {
+        "5%": "5%",
+        "7%": "7%",
         "10%": "10%",
+        "15%": "15%",
         "20%": "20%",
       },
       inset: {
@@ -51,6 +61,9 @@ const tailwindConfig = {
         "0.5rem": "0.5rem",
         "0.6rem": "0.6rem",
         "0.7rem": "0.7rem",
+      },
+      gridTemplateColumns: {
+        custom: "100px minmax(100px, 1fr) 200px",
       },
     },
   },
