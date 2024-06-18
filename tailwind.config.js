@@ -10,6 +10,7 @@ const tailwindConfig = {
       lg: "1025px",
       xl: "1281px",
       "2xl": "1537px",
+      "4xl": "1441px",
       uw: "2041px",
     },
     extend: {
@@ -32,6 +33,7 @@ const tailwindConfig = {
         lightgray2: "#afb5c0",
         darkgray: "#f8f8f8",
         darkgray2: "#e8e8e8",
+        darkgray3: "#f1f1f1",
         darkwhite: "#dedede",
         darkwhite2: "#f3f3f3",
         green: "#00A700",

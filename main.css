@@ -15,4 +15,16 @@
   .feather {
     @apply text-center w-5 h-5 text-white  hover:text-primary active:text-darkprimary focus:text-primary;
   }
+  .modal-bg {
+    @apply hidden;
+  }
+  .modal-bg.show {
+    @apply flex;
+  }
+  .dropdown-content {
+    @apply hidden;
+  }
+  .dropdown-content.show {
+    @apply block;
+  }
 }

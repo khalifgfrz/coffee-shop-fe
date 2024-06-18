@@ -10,20 +10,36 @@ Coffee Shop App adalah aplikasi sederhana untuk mengelola coffee shop. Aplikasi 
 
 ## Tentang Proyek
 
-Aplikasi Coffee Shop ini dibangun dengan tujuan untuk memudahkan pengguna dalam mengelola usaha coffee shop mereka. Aplikasi ini menggunakan html, css, dan javascript untuk frontend.
+Aplikasi Coffee Shop ini dibangun dengan tujuan untuk memudahkan pengguna dalam mengelola usaha coffee shop mereka. Aplikasi ini menggunakan html, css, tailwind css, dan javascript untuk frontend.
 
-### Fitur Utama
+### Fitur
 
-- Halaman Home
-- Halaman Login & Registrasi
+- Halaman Index
+- Halaman Login
+- Halaman Register
 - Halaman Profile
-- Halaman Detail Produk
+- Halaman Product
+- Halaman Checkout
+- Halaman History Order
+- Halaman Detail Product
+- Halaman Detail Order
 
 ### Teknologi
 
 - HTML
 - CSS
+- Tailwind CSS
 - Javascript
+
+### Screenshot
+
+![Checkout Page](assets/images/pages/checkout.webp)
+
+![Detail Order Page](assets/images/pages/detail-order.webp)
+
+![Detail Product Page](assets/images/pages/detail-product.webp)
+
+![History Order Page](assets/images/pages/history-order.webp)
 
 ## Mulai
 
