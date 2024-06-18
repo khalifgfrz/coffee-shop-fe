@@ -31,11 +31,12 @@ const tailwindConfig = {
         lightgray: "#4f5665",
         lightgray2: "#afb5c0",
         darkgray: "#f8f8f8",
-        darkgray2: "#E8E8E8",
+        darkgray2: "#e8e8e8",
         darkwhite: "#dedede",
         darkwhite2: "#f3f3f3",
         green: "#00A700",
         greenbg: "#C9E6C9",
+        span: "#8e6447",
       },
       padding: {
         "0.5%": "0.5%",
@@ -56,6 +57,7 @@ const tailwindConfig = {
       },
       width: {
         "30rem": "30rem",
+        "45%": "45%",
       },
       fontSize: {
         "0.5rem": "0.5rem",
