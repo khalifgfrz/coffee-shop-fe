@@ -5,6 +5,9 @@ Coffee Shop App adalah aplikasi sederhana untuk mengelola coffee shop. Aplikasi 
 ## Daftar Isi
 
 1. [Tentang Proyek](#tentang-proyek)
+   - [Fitur](#fitur)
+   - [Teknologi](#teknologi)
+   - [Screenshot](#screenshot)
 2. [Mulai](#mulai)
 3. [Kontak](#kontak)
 
