@@ -1,22 +1,19 @@
-// hamburger
-// dropdownHamburger
-
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const dropdownHamburger = document.getElementById("dropdownHamburger");
+  const toggleDropdown = document.getElementById("toggleDropdown");
+  const dropdownMenu = document.getElementById("dropdownMenu");
 
-  hamburger.addEventListener("click", (event) => {
+  toggleDropdown.addEventListener("click", (event) => {
     event.stopPropagation();
-    dropdownHamburger.classList.toggle("show");
+    dropdownMenu.classList.toggle("show");
   });
 
   document.addEventListener("click", (event) => {
-    if (!hamburger.contains(event.target)) {
-      dropdownHamburger.classList.remove("show");
+    if (!toggleDropdown.contains(event.target)) {
+      dropdownMenu.classList.remove("show");
     }
   });
 
-  dropdownHamburger.addEventListener("click", (event) => {
+  dropdownMenu.addEventListener("click", (event) => {
     event.stopPropagation();
   });
 });

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Card</title>
+    <link href="styles/main.css" rel="stylesheet" />
+    <style>
+      .description {
+        max-height: 50px; /* bagian yang meniban gambar */
+        overflow: hidden;
+        position: relative;
+      }
+      .description::after {
+        content: "";
+        display: block;
+        height: 100%; /* tinggi deskripsi */
+        background: white; /* latar belakang untuk menutupi gambar */
+        opacity: 0.75; /* transparansi */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="max-w-sm mx-auto">
+      <div class="relative">
+        <img src="https://via.placeholder.com/400" alt="Menu Image" class="w-full h-auto" />
+        <div class="description p-4 bg-white bg-opacity-75">
+          <h3 class="text-lg font-bold">Nama Menu</h3>
+          <p class="text-sm">Deskripsi menu yang sedikit meniban gambar menu, sisanya akan keluar di bawah gambar ini.</p>
+        </div>
+      </div>
+      <div class="p-4 bg-white">
+        <p class="text-sm">Deskripsi menu yang lebih panjang yang muncul di bawah gambar ini. Bagian ini akan menampilkan seluruh deskripsi tanpa terpotong.</p>
+      </div>
+    </div>
+  </body>
+</html>

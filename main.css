@@ -12,6 +12,12 @@
 
 /* untuk bikin component class */
 @layer components {
+  .navbar-nav-detail {
+    @apply right-[-150%];
+  }
+  .navbar-nav-detail.active {
+    @apply right-0;
+  }
   .feather {
     @apply text-center w-5 h-5 text-white  hover:text-primary active:text-darkprimary focus:text-primary;
   }

@@ -19,71 +19,78 @@
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body class="font-jakarta">
-    <!-- Navbar Start -->
-    <nav class="flex justify-between items-center bg-black fixed py-[2%] tbt:py-[0.5%] px-[10%] top-0 left-0 right-0 z-50">
-      <div class="flex items-center">
-        <div class="mr-16">
-          <a href="#">
-            <img href="#" width="90" height="22.5" class="tbt:w-44" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
-          </a>
+    <!-- Header Start -->
+    <header>
+      <nav class="flex justify-between items-center bg-black fixed py-[2%] tbt:py-[0.5%] px-[5%] tbt:px-[10%] top-0 left-0 right-0 z-50">
+        <div class="flex items-center">
+          <div class="mr-16">
+            <a href="#">
+              <img href="#" width="90" height="22.5" class="tbt:w-44" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
+            </a>
+          </div>
+          <div class="hidden md:flex uw:text-xl">
+            <a
+              class="md:mr-16 md:text-white md:after:block md:after:border-b-2 md:after:border-solid md:after:border-primary md:after:scale-x-0 md:after:duration-200 md:after:ease-linear md:hover:after:scale-x-100 md:active:text-darkwhite"
+              href="#home"
+              >Home</a
+            >
+            <a
+              class="md:mr-16 md:text-white md:after:block md:after:border-b-2 md:after:border-solid md:after:border-primary md:after:scale-x-0 md:after:duration-200 md:after:ease-linear md:hover:after:scale-x-100 md:active:text-darkwhite"
+              href="#product"
+              >Product</a
+            >
+          </div>
         </div>
-        <div class="hidden md:flex uw:text-xl">
-          <a class="mr-16 text-white after:block after:border-b-2 after:border-solid after:border-primary after:scale-x-0 after:duration-200 after:ease-linear hover:after:scale-x-100 active:text-darkwhite" href="#home">Home</a>
-          <a class="mr-16 text-white after:block after:border-b-2 after:border-solid after:border-primary after:scale-x-0 after:duration-200 after:ease-linear hover:after:scale-x-100 active:text-darkwhite" href="#product">Product</a>
+        <div class="flex justify-center items-center">
+          <a class="hidden md:flex md:mr-6" href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
+          <a class="mr-6" href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+          <div class="hidden md:flex uw:text-xl">
+            <button id="logoutBtn" class="bg-primary rounded text-sm lg:text-base w-16 h-8 lg:w-20 lg:h-10 uw:w-24 uw:h-12 hover:bg-darkprimary2 active:bg-darkprimary focus:bg-darkprimary2">Log Out</button>
+          </div>
+          <a id="hamburger-menu" class="md:hidden" href="#" aria-label="Read more about hamburger"><i data-feather="menu"></i></a>
+          <div class="navbar-nav-detail absolute top-full bg-white w-1/2 tbt:w-1/4 h-screen duration-300">
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Home</a>
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Product</a>
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Search</a>
+            <a id="logoutBtn2" class="block text-black text-sm m-2 p-2 after:origin-top-left hover:after:scale-x-0">Log Out</a>
+          </div>
         </div>
-      </div>
-      <div class="flex justify-center items-center">
-        <a class="hidden md:flex md:mr-6" href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
-        <a class="mr-6" href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <div class="hidden md:flex uw:text-xl">
-          <button id="logoutBtn" class="bg-primary rounded text-sm lg:text-base w-16 h-8 lg:w-20 lg:h-10 uw:w-24 uw:h-12 hover:bg-darkprimary2 active:bg-darkprimary focus:bg-darkprimary2">Log Out</button>
-        </div>
-        <div class="inline-block">
-          <a id="hamburger" class="md:hidden" href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
-          <div id="dropdownHamburger" class="dropdown-content absolute mt-1 tbt:mt-2 right-8 tbt:right-20 w-32 lg:w-40 uw:w-52 bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-            <div class="py-1">
-              <a href="#" class="block px-4 py-2 font-bold text-xs xl:text-sm 2xl:text-base uw:text-xl text-lightblack2 hover:bg-darkgray2 active:bg-darkgray">Home</a>
-              <a href="#" class="block px-4 py-2 font-bold text-xs xl:text-sm 2xl:text-base uw:text-xl text-gray-700 hover:bg-darkgray2 active:bg-darkgray">Product</a>
-              <a href="#" class="block px-4 py-2 font-bold text-xs xl:text-sm 2xl:text-base uw:text-xl text-gray-700 hover:bg-darkgray2 active:bg-darkgray">Search</a>
-              <a id="logoutBtn2" class="block px-4 py-2 font-bold text-xs xl:text-sm 2xl:text-base uw:text-xl text-gray-700 hover:bg-darkgray2 active:bg-darkgray">Log Out</a>
+        <div id="modalBg" class="fixed inset-0 bg-black bg-opacity-50 modal-bg justify-center items-center">
+          <div class="bg-white p-6 rounded shadow-lg max-w-md uw:max-w-2xl w-3/4 tbt:w-full text-center">
+            <h2 class="text-sm tbt:text-2xl uw:text-4xl font-semibold mb-4">Confirm Log Out</h2>
+            <p class="text-xs xsm:text-sm tbt:text-base uw:text-2xl mb-6">Are you sure you want to log out?</p>
+            <div class="flex justify-center">
+              <button id="confirmLogoutBtn" class="text-xs tbt:text-base uw:text-2xl bg-red-500 hover:bg-red-600 active:bg-red-700 text-white px-4 py-2 rounded mr-2">Log Out</button>
+              <button id="closeModalBtn" class="text-xs tbt:text-base uw:text-2xl bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white px-4 py-2 rounded">Cancel</button>
             </div>
           </div>
         </div>
-      </div>
-      <div id="modalBg" class="fixed inset-0 bg-black bg-opacity-50 modal-bg justify-center items-center">
-        <div class="bg-white p-6 rounded shadow-lg max-w-md uw:max-w-2xl w-3/4 tbt:w-full text-center">
-          <h2 class="text-sm tbt:text-2xl uw:text-4xl font-semibold mb-4">Confirm Log Out</h2>
-          <p class="text-xs xsm:text-sm tbt:text-base uw:text-2xl mb-6">Are you sure you want to log out?</p>
-          <div class="flex justify-center">
-            <button id="confirmLogoutBtn" class="text-xs tbt:text-base uw:text-2xl bg-red-500 hover:bg-red-600 active:bg-red-700 text-white px-4 py-2 rounded mr-2">Log Out</button>
-            <button id="closeModalBtn" class="text-xs tbt:text-base uw:text-2xl bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white px-4 py-2 rounded">Cancel</button>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar End -->
+      </nav>
+    </header>
+    <!-- Header End -->
 
+    <!-- Main Start -->
     <main class="mt-[10%] uw:mt-[5%] lg:mt-[7%]">
-      <section class="px-[10%]">
+      <section class="px-[5%] tbt:px-[10%]">
         <div class="block mt-10">
           <div class="inline-block tbt:flex tbt:justify-between tbt:mr-1">
-            <div class="inline-block tbt:w-1/2 tbt:mr-5">
+            <div class="inline-block tbt:w-1/2 lg:w-1/3 tbt:mr-5">
               <div class="flex">
                 <img class="w-full" src="assets/images/menu/1.webp" alt="menu1" />
               </div>
-              <div class="flex justify-between uw:justify-center mt-2">
-                <div class="flex mr-2 lg:mr-4">
-                  <img class="lg:w-48 lg:h-48" width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
+              <div class="flex justify-center mt-2">
+                <div class="flex mr-2">
+                  <img class="uw:w-64 uw:h-64" width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
                 </div>
-                <div class="flex mr-2 lg:mr-4">
-                  <img class="lg:w-48 lg:h-48" width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
+                <div class="flex mr-2">
+                  <img class="uw:w-64 uw:h-64" width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
                 </div>
                 <div class="flex">
-                  <img class="lg:w-48 lg:h-48" width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
+                  <img class="uw:w-64 uw:h-64" width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
                 </div>
               </div>
             </div>
-            <div class="tbt:w-1/2 mt-4 tbt:mt-0">
+            <div class="tbt:w-1/2 lg:w-2/3 mt-4 tbt:mt-0">
               <p class="text-[0.6rem] uw:text-xl text-center p-1 bg-red-600 text-white rounded-2xl max-w-20 uw:max-w-36 mb-1">FLASH SALE</p>
               <p class="font-bold mb-1 md:text-lg uw:text-4xl">Hazzlenut Latte</p>
               <div class="flex items-center">
@@ -131,9 +138,9 @@
                 </button>
                 <button class="w-1/2 h-8 border border-solid border-darkwhite text-lightgray hover:border-primary text-xs md:text-sm lg:text-base uw:text-xl active:bg-darkgray focus:border-primary focus:text-black">Hot</button>
               </div>
-              <div class="block mt-3 uw:mt-10">
-                <button class="w-full h-8 uw:h-12 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs md:text-sm lg:text-base uw:text-xl">Buy</button>
-                <button class="mt-3 w-full h-8 uw:h-12 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs md:text-sm lg:text-base uw:text-xl">
+              <div class="block tbt:flex mt-3 md:mt-8 uw:mt-10">
+                <button class="w-full tbt:w-1/2 h-8 uw:h-12 tbt:mr-5 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs md:text-sm lg:text-base uw:text-xl">Buy</button>
+                <button class="mt-3 tbt:mt-0 w-full tbt:w-1/2 h-8 uw:h-12 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs md:text-sm lg:text-base uw:text-xl">
                   <div class="flex items-center justify-center">
                     <img class="mr-2 uw:w-8 uw:h-8" width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
                     <p>Add To Cart</p>
@@ -144,86 +151,92 @@
           </div>
           <div class="block">
             <p class="mt-4 text-center font-semibold text-lg tbt:text-xl uw:text-4xl text-lightblack2">Recommendation <span class="text-span">For You</span></p>
-            <div class="flex justify-between">
-              <div class="w-[45%] mr-2 tbt:w-1/3">
+            <div class="flex justify-center">
+              <div class="relative w-1/2 mr-2 tbt:w-1/3 md:w-1/4">
                 <div class="flex">
                   <img class="mt-4 mb-2 w-full" src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
                 </div>
-                <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
-                <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-                <div class="flex text-primary items-center mt-1">
-                  <div class="mr-1 uw:text-4xl" data-value="1">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="2">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="3">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="4">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="5">&#9733;</div>
-                  <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
-                </div>
-                <div class="flex items-center">
-                  <p class="hidden tbt:flex tbt:text-red-600 tbt:text-xs md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
-                  <p class="text-primary md:text-xl uw:text-2xl">IDR 20.000</p>
-                </div>
                 <div>
-                  <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
-                  <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
-                    <div class="flex items-center justify-center">
-                      <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
-                    </div>
-                  </button>
+                  <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
+                  <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                  <div class="flex text-primary items-center mt-1">
+                    <div class="mr-1 uw:text-4xl" data-value="1">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="2">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="3">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="4">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="5">&#9733;</div>
+                    <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
+                  </div>
+                  <div class="flex items-center">
+                    <p class="hidden tbt:flex tbt:text-red-600 tbt:text-xs md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
+                    <p class="text-primary md:text-xl uw:text-2xl">IDR 20.000</p>
+                  </div>
+                  <div>
+                    <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
+                    <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
+                      <div class="flex items-center justify-center">
+                        <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="w-[45%] tbt:mr-2 tbt:w-1/3">
+              <div class="w-1/2 tbt:mr-2 tbt:w-1/3 md:w-1/4">
                 <div class="flex">
                   <img class="mt-4 mb-2 w-full" src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
                 </div>
-                <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
-                <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-                <div class="flex text-primary items-center mt-1">
-                  <div class="mr-1 uw:text-4xl" data-value="1">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="2">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="3">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="4">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="5">&#9733;</div>
-                  <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
-                </div>
-                <div class="flex items-center">
-                  <p class="hidden tbt:flex tbt:text-red-600 tbt:text-xs md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
-                  <p class="text-primary md:text-xl uw:text-2xl">IDR 20.000</p>
-                </div>
                 <div>
-                  <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
-                  <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
-                    <div class="flex items-center justify-center">
-                      <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
-                    </div>
-                  </button>
+                  <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
+                  <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                  <div class="flex text-primary items-center mt-1">
+                    <div class="mr-1 uw:text-4xl" data-value="1">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="2">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="3">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="4">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="5">&#9733;</div>
+                    <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
+                  </div>
+                  <div class="flex items-center">
+                    <p class="hidden tbt:flex tbt:text-red-600 tbt:text-xs md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
+                    <p class="text-primary md:text-xl uw:text-2xl">IDR 20.000</p>
+                  </div>
+                  <div>
+                    <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
+                    <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
+                      <div class="flex items-center justify-center">
+                        <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="hidden tbt:block tbt:w-1/3">
+              <div class="hidden tbt:block tbt:w-1/3 md:w-1/4">
                 <div class="flex">
                   <img class="mt-4 mb-2 w-full" src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
                 </div>
-                <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
-                <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-                <div class="flex text-primary items-center mt-1">
-                  <div class="mr-1 uw:text-4xl" data-value="1">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="2">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="3">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="4">&#9733;</div>
-                  <div class="mr-1 uw:text-4xl" data-value="5">&#9733;</div>
-                  <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
-                </div>
-                <div class="flex items-center">
-                  <p class="hidden tbt:flex tbt:text-red-600 tbt:text-xs md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
-                  <p class="text-primary md:text-xl uw:text-2xl">IDR 20.000</p>
-                </div>
                 <div>
-                  <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
-                  <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
-                    <div class="flex items-center justify-center">
-                      <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
-                    </div>
-                  </button>
+                  <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
+                  <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+                  <div class="flex text-primary items-center mt-1">
+                    <div class="mr-1 uw:text-4xl" data-value="1">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="2">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="3">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="4">&#9733;</div>
+                    <div class="mr-1 uw:text-4xl" data-value="5">&#9733;</div>
+                    <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
+                  </div>
+                  <div class="flex items-center">
+                    <p class="hidden tbt:flex tbt:text-red-600 tbt:text-xs md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
+                    <p class="text-primary md:text-xl uw:text-2xl">IDR 20.000</p>
+                  </div>
+                  <div>
+                    <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
+                    <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
+                      <div class="flex items-center justify-center">
+                        <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -238,40 +251,41 @@
         </div>
       </section>
     </main>
+    <!-- Main End -->
 
     <!-- Footer Start -->
-    <footer class="flex flex-wrap bg-darkgray justify-between py-[1%] px-[10%] mt-12">
-      <div class="py-8">
-        <img class="mb-4 uw:w-60 uw:h-16 tbt:w-40 tbt:h-10" width="80" height="20" src="assets/images/footer-logo.webp" alt="footer-logo" />
-        <p class="mb-7 text-lightgray text-sm uw:text-xl tbt:text-base">
+    <footer class="flex flex-wrap bg-darkgray justify-between py-[1%] px-[5%] tbt:px-[10%] mt-12">
+      <div class="py-4 w-full tbt:w-1/2 md:w-fit">
+        <img class="mb-4 uw:w-60 uw:h-16" width="160" height="40" src="assets/images/footer-logo.webp" alt="footer-logo" />
+        <p class="mb-7 text-sm text-lightgray lg:text-lg uw:text-xl">
           Coffee Shop is a store that sells some good <br />
           meals, and especially coffee. We provide <br />
           high quality beans
         </p>
-        <p class="text-lightgray2 text-xs tbt:text-sm uw:text-base">&copy; 2024CoffeeStore</p>
+        <p class="text-lightgray2 text-sm lg:text-base">&copy; 2024CoffeeStore</p>
       </div>
-      <div class="py-4 mr-[20%] tbt:mr-0">
-        <h2 class="mb-6 font-bold text-sm uw:text-xl tbt:text-base">Product</h2>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Our Product</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Pricing</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Locations</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Countries</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Blog</a>
+      <div class="py-4 w-1/2 tbt:w-1/4 md:w-fit">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Product</h2>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Our Product</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Pricing</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Locations</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Countries</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Blog</a>
       </div>
-      <div class="py-4">
-        <h2 class="mb-6 font-bold text-sm uw:text-xl tbt:text-base">Engage</h2>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Partner</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">FAQ</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">About Us</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Privacy Policy</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Terms of Service</a>
+      <div class="py-4 w-1/2 tbt:w-1/4 md:w-fit">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Engage</h2>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Partner</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">FAQ</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">About Us</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Privacy Policy</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Terms of Service</a>
       </div>
-      <div class="py-4 h-1/2">
-        <h2 class="mb-6 font-bold text-sm uw:text-xl tbt:text-base">Social Media</h2>
+      <div class="py-4 tbt:w-1/4 md:w-fit h-1/2">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Social Media</h2>
         <div class="flex">
-          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black uw:w-12 uw:h-12" width="30" height="30" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
-          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black uw:w-12 uw:h-12" width="30" height="30" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
-          <a href="#"><img class="rounded-full hover:bg-lightblack active:bg-black uw:w-12 uw:h-12" width="30" height="30" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
+          <a href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
         </div>
       </div>
     </footer>
@@ -283,7 +297,7 @@
     </script>
 
     <!-- Script -->
-    <script src="script/dropdown.js"></script>
+    <script src="script/navbar.js"></script>
     <script src="script/logoutModal.js"></script>
   </body>
 </html>

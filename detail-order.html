@@ -19,58 +19,94 @@
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body class="font-jakarta">
-    <!-- Navbar Start -->
-    <nav class="flex justify-between items-center bg-black fixed py-[2%] tbt:py-[0.5%] px-[10%] top-0 left-0 right-0 z-50">
-      <div class="flex items-center">
-        <div class="mr-16">
-          <a href="#">
-            <img href="#" width="90" height="22.5" class="tbt:w-44" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
-          </a>
+    <!-- Header Start -->
+    <header>
+      <nav class="flex justify-between items-center bg-black fixed py-[2%] tbt:py-[0.5%] px-[5%] tbt:px-[10%] top-0 left-0 right-0 z-50">
+        <div class="flex items-center">
+          <div class="mr-16">
+            <a href="#">
+              <img href="#" width="90" height="22.5" class="tbt:w-44" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
+            </a>
+          </div>
+          <div class="hidden md:flex uw:text-xl">
+            <a
+              class="md:mr-16 md:text-white md:after:block md:after:border-b-2 md:after:border-solid md:after:border-primary md:after:scale-x-0 md:after:duration-200 md:after:ease-linear md:hover:after:scale-x-100 md:active:text-darkwhite"
+              href="#home"
+              >Home</a
+            >
+            <a
+              class="md:mr-16 md:text-white md:after:block md:after:border-b-2 md:after:border-solid md:after:border-primary md:after:scale-x-0 md:after:duration-200 md:after:ease-linear md:hover:after:scale-x-100 md:active:text-darkwhite"
+              href="#product"
+              >Product</a
+            >
+          </div>
         </div>
-        <div class="hidden md:flex uw:text-xl">
-          <a class="mr-16 text-white after:block after:border-b-2 after:border-solid after:border-primary after:scale-x-0 after:duration-200 after:ease-linear hover:after:scale-x-100 active:text-darkwhite" href="#home">Home</a>
-          <a class="mr-16 text-white after:block after:border-b-2 after:border-solid after:border-primary after:scale-x-0 after:duration-200 after:ease-linear hover:after:scale-x-100 active:text-darkwhite" href="#product">Product</a>
+        <div class="flex justify-center items-center">
+          <a class="hidden md:flex md:mr-6" href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
+          <a class="mr-6" href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+          <div class="hidden md:flex uw:text-xl">
+            <button id="logoutBtn" class="bg-primary rounded text-sm lg:text-base w-16 h-8 lg:w-20 lg:h-10 uw:w-24 uw:h-12 hover:bg-darkprimary2 active:bg-darkprimary focus:bg-darkprimary2">Log Out</button>
+          </div>
+          <a id="hamburger-menu" class="md:hidden" href="#" aria-label="Read more about hamburger"><i data-feather="menu"></i></a>
+          <div class="navbar-nav-detail absolute top-full bg-white w-1/2 tbt:w-1/4 h-screen duration-300">
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Home</a>
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Product</a>
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Search</a>
+            <a id="logoutBtn2" class="block text-black text-sm m-2 p-2 after:origin-top-left hover:after:scale-x-0">Log Out</a>
+          </div>
         </div>
-      </div>
-      <div class="flex justify-center items-center">
-        <a class="hidden md:flex md:mr-6" href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
-        <a class="mr-6" href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <div class="hidden md:flex uw:text-xl">
-          <button id="logoutBtn" class="bg-primary rounded text-sm lg:text-base w-16 h-8 lg:w-20 lg:h-10 uw:w-24 uw:h-12 hover:bg-darkprimary2 active:bg-darkprimary focus:bg-darkprimary2">Log Out</button>
-        </div>
-        <div class="inline-block">
-          <a id="hamburger" class="md:hidden" href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
-          <div id="dropdownHamburger" class="dropdown-content absolute mt-1 tbt:mt-2 right-8 tbt:right-20 w-32 lg:w-40 uw:w-52 bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none">
-            <div class="py-1">
-              <a href="#" class="block px-4 py-2 font-bold text-xs xl:text-sm 2xl:text-base uw:text-xl text-lightblack2 hover:bg-darkgray2 active:bg-darkgray">Home</a>
-              <a href="#" class="block px-4 py-2 font-bold text-xs xl:text-sm 2xl:text-base uw:text-xl text-gray-700 hover:bg-darkgray2 active:bg-darkgray">Product</a>
-              <a href="#" class="block px-4 py-2 font-bold text-xs xl:text-sm 2xl:text-base uw:text-xl text-gray-700 hover:bg-darkgray2 active:bg-darkgray">Search</a>
-              <a id="logoutBtn2" class="block px-4 py-2 font-bold text-xs xl:text-sm 2xl:text-base uw:text-xl text-gray-700 hover:bg-darkgray2 active:bg-darkgray">Log Out</a>
+        <div id="modalBg" class="fixed inset-0 bg-black bg-opacity-50 modal-bg justify-center items-center">
+          <div class="bg-white p-6 rounded shadow-lg max-w-md uw:max-w-2xl w-3/4 tbt:w-full text-center">
+            <h2 class="text-sm tbt:text-2xl uw:text-4xl font-semibold mb-4">Confirm Log Out</h2>
+            <p class="text-xs xsm:text-sm tbt:text-base uw:text-2xl mb-6">Are you sure you want to log out?</p>
+            <div class="flex justify-center">
+              <button id="confirmLogoutBtn" class="text-xs tbt:text-base uw:text-2xl bg-red-500 hover:bg-red-600 active:bg-red-700 text-white px-4 py-2 rounded mr-2">Log Out</button>
+              <button id="closeModalBtn" class="text-xs tbt:text-base uw:text-2xl bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white px-4 py-2 rounded">Cancel</button>
             </div>
           </div>
         </div>
-      </div>
-      <div id="modalBg" class="fixed inset-0 bg-black bg-opacity-50 modal-bg justify-center items-center">
-        <div class="bg-white p-6 rounded shadow-lg max-w-md uw:max-w-2xl w-3/4 tbt:w-full text-center">
-          <h2 class="text-sm tbt:text-2xl uw:text-4xl font-semibold mb-4">Confirm Log Out</h2>
-          <p class="text-xs xsm:text-sm tbt:text-base uw:text-2xl mb-6">Are you sure you want to log out?</p>
-          <div class="flex justify-center">
-            <button id="confirmLogoutBtn" class="text-xs tbt:text-base uw:text-2xl bg-red-500 hover:bg-red-600 active:bg-red-700 text-white px-4 py-2 rounded mr-2">Log Out</button>
-            <button id="closeModalBtn" class="text-xs tbt:text-base uw:text-2xl bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white px-4 py-2 rounded">Cancel</button>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar End -->
+      </nav>
+    </header>
+    <!-- Header End -->
 
+    <!-- Main Start -->
     <main class="mt-[15%] uw:mt-[5%] lg:mt-[7%] tbt:mt-[10%]">
-      <section class="px-[10%]">
-        <header>
-          <h1 class="font-bold text-xl md:text-2xl lg:text-4xl">Order #12354-09893</h1>
-        </header>
+      <section class="px-[5%] tbt:px-[10%]">
+        <h1 class="font-bold text-xl md:text-2xl lg:text-4xl">Order #12354-09893</h1>
         <p class="mt-2 text-lightgray text-xs">21 March 2024 at 10.30 AM</p>
-        <div class="inline-block mt-2 tbt:flex tbt:justify-between">
-          <div class="mt-5 tbt:mt-2 tbt:w-2/5">
+        <div class="inline-block mt-2 tbt:flex tbt:flex-row-reverse tbt:justify-between">
+          <div class="tbt:w-1/2">
+            <h2 class="font-semibold md:text-2xl">Your Order</h2>
+            <div class="flex bg-gray-50 mt-0 tbt:mt-3 p-3">
+              <div class="flex mr-2 justify-center items-center">
+                <img width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
+              </div>
+              <div class="w-3/5 pr-5">
+                <p class="text-xs text-center p-1 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
+                <p class="font-bold mb-3 text-sm md:text-lg">Hazzlenut Latte</p>
+                <p class="text-lightgray mb-3 text-xs md:text-base">2pcs | Reguler | Ice | Dine In</p>
+                <div class="flex">
+                  <p class="text-red-600 text-xs md:text-sm line-through mr-2">IDR40.000</p>
+                  <p class="text-primary text-sm md:text-xl">IDR20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex bg-gray-50 mt-3 p-3">
+              <div class="flex mr-2 justify-center items-center">
+                <img width="150" height="150" src="assets/images/menu/4.webp" alt="menu2" />
+              </div>
+              <div class="w-3/5 pr-5">
+                <p class="text-xs text-center p-1 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
+                <p class="font-bold mb-3 text-sm md:text-lg">Hazzlenut Latte</p>
+                <p class="text-lightgray mb-3 text-xs md:text-base">2pcs | Reguler | Ice | Dine In</p>
+                <div class="flex">
+                  <p class="text-red-600 text-xs md:text-sm line-through mr-2">IDR40.000</p>
+                  <p class="text-primary text-sm md:text-xl">IDR20.000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 tbt:mt-0 tbt:w-1/2 tbt:mr-5">
             <h2 class="md:text-2xl font-semibold">Order Information</h2>
             <div class="mt-4">
               <div class="flex mb-3 font-bold justify-between w-full border-b pb-3">
@@ -121,74 +157,44 @@
               </div>
             </div>
           </div>
-          <div class="mt-10 tbt:mt-0 tbt:w-1/2 tbt:mr-1">
-            <h2 class="font-semibold md:text-2xl">Your Order</h2>
-            <div class="flex bg-gray-50 mt-3 p-3">
-              <div class="flex mr-2 justify-center items-center">
-                <img width="150" height="150" src="assets/images/menu/2.webp" alt="menu2" />
-              </div>
-              <div class="w-3/5 pr-5">
-                <p class="text-xs text-center p-1 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
-                <p class="font-bold mb-3 text-sm md:text-lg">Hazzlenut Latte</p>
-                <p class="text-lightgray mb-3 text-xs md:text-base">2pcs | Reguler | Ice | Dine In</p>
-                <div class="flex">
-                  <p class="text-red-600 text-xs md:text-sm line-through mr-2">IDR40.000</p>
-                  <p class="text-primary text-sm md:text-xl">IDR20.000</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex bg-gray-50 mt-3 p-3">
-              <div class="flex mr-2 justify-center items-center">
-                <img width="150" height="150" src="assets/images/menu/4.webp" alt="menu2" />
-              </div>
-              <div class="w-3/5 pr-5">
-                <p class="text-xs text-center p-1 bg-red-600 text-white rounded-2xl max-w-24 mb-3">FLASH SALE</p>
-                <p class="font-bold mb-3 text-sm md:text-lg">Hazzlenut Latte</p>
-                <p class="text-lightgray mb-3 text-xs md:text-base">2pcs | Reguler | Ice | Dine In</p>
-                <div class="flex">
-                  <p class="text-red-600 text-xs md:text-sm line-through mr-2">IDR40.000</p>
-                  <p class="text-primary text-sm md:text-xl">IDR20.000</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>
+    <!-- Main End -->
 
     <!-- Footer Start -->
-    <footer class="flex flex-wrap bg-darkgray justify-between py-[1%] px-[10%] mt-12">
-      <div class="py-8">
-        <img class="mb-4 uw:w-60 uw:h-16 tbt:w-40 tbt:h-10" width="80" height="20" src="assets/images/footer-logo.webp" alt="footer-logo" />
-        <p class="mb-7 text-lightgray text-sm uw:text-xl tbt:text-base">
+    <footer class="flex flex-wrap bg-darkgray justify-between py-[1%] px-[5%] tbt:px-[10%] mt-12">
+      <div class="py-4 w-full tbt:w-1/2 md:w-fit">
+        <img class="mb-4 uw:w-60 uw:h-16" width="160" height="40" src="assets/images/footer-logo.webp" alt="footer-logo" />
+        <p class="mb-7 text-sm text-lightgray lg:text-lg uw:text-xl">
           Coffee Shop is a store that sells some good <br />
           meals, and especially coffee. We provide <br />
           high quality beans
         </p>
-        <p class="text-lightgray2 text-xs tbt:text-sm uw:text-base">&copy; 2024CoffeeStore</p>
+        <p class="text-lightgray2 text-sm lg:text-base">&copy; 2024CoffeeStore</p>
       </div>
-      <div class="py-4 mr-[20%] tbt:mr-0">
-        <h2 class="mb-6 font-bold text-sm uw:text-xl tbt:text-base">Product</h2>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Our Product</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Pricing</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Locations</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Countries</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Blog</a>
+      <div class="py-4 w-1/2 tbt:w-1/4 md:w-fit">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Product</h2>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Our Product</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Pricing</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Locations</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Countries</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Blog</a>
       </div>
-      <div class="py-4">
-        <h2 class="mb-6 font-bold text-sm uw:text-xl tbt:text-base">Engage</h2>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Partner</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">FAQ</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">About Us</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Privacy Policy</a>
-        <a class="flex mb-4 text-lightgray text-sm uw:text-xl tbt:text-base hover:underline active:text-lightgray2" href="#">Terms of Service</a>
+      <div class="py-4 w-1/2 tbt:w-1/4 md:w-fit">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Engage</h2>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Partner</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">FAQ</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">About Us</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Privacy Policy</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Terms of Service</a>
       </div>
-      <div class="py-4 h-1/2">
-        <h2 class="mb-6 font-bold text-sm uw:text-xl tbt:text-base">Social Media</h2>
+      <div class="py-4 tbt:w-1/4 md:w-fit h-1/2">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Social Media</h2>
         <div class="flex">
-          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black uw:w-12 uw:h-12" width="30" height="30" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
-          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black uw:w-12 uw:h-12" width="30" height="30" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
-          <a href="#"><img class="rounded-full hover:bg-lightblack active:bg-black uw:w-12 uw:h-12" width="30" height="30" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
+          <a href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
         </div>
       </div>
     </footer>
@@ -200,7 +206,7 @@
     </script>
 
     <!-- Script -->
-    <script src="script/dropdown.js"></script>
+    <script src="script/navbar.js"></script>
     <script src="script/logoutModal.js"></script>
   </body>
 </html>
