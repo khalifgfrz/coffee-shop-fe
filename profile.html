@@ -7,7 +7,7 @@
     <title>Profile</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/profile.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
@@ -15,136 +15,168 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
     <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
-
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body>
-    <!-- Navbar Start -->
-    <nav class="navbar">
-      <div class="navbar-nav">
-        <div class="navbar-nav-logo">
-          <a href="#">
-            <img href="#" width="180" height="45" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
-          </a>
+  <body class="font-jakarta">
+    <!-- Header Start -->
+    <header>
+      <nav class="flex justify-between items-center bg-black fixed py-[2%] tbt:py-[0.5%] px-[5%] tbt:px-[10%] top-0 left-0 right-0 z-50">
+        <div class="flex items-center">
+          <div class="mr-16">
+            <a href="#">
+              <img href="#" width="90" height="22.5" class="tbt:w-44" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
+            </a>
+          </div>
+          <div class="hidden md:flex uw:text-xl">
+            <a
+              class="md:mr-16 md:text-white md:after:block md:after:border-b-2 md:after:border-solid md:after:border-primary md:after:scale-x-0 md:after:duration-200 md:after:ease-linear md:hover:after:scale-x-100 md:active:text-darkwhite"
+              href="#home"
+              >Home</a
+            >
+            <a
+              class="md:mr-16 md:text-white md:after:block md:after:border-b-2 md:after:border-solid md:after:border-primary md:after:scale-x-0 md:after:duration-200 md:after:ease-linear md:hover:after:scale-x-100 md:active:text-darkwhite"
+              href="#product"
+              >Product</a
+            >
+          </div>
         </div>
-        <div class="navbar-nav-detail">
-          <a href="#home">Home</a>
-          <a href="#product">Product</a>
+        <div class="flex justify-center items-center">
+          <a class="hidden md:flex md:mr-6" href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
+          <a class="mr-6" href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+          <div class="hidden md:flex uw:text-xl">
+            <button id="logoutBtn" class="bg-primary rounded text-sm lg:text-base w-16 h-8 lg:w-20 lg:h-10 uw:w-24 uw:h-12 hover:bg-darkprimary2 active:bg-darkprimary focus:bg-darkprimary2">Log Out</button>
+          </div>
+          <a id="hamburger-menu" class="md:hidden" href="#" aria-label="Read more about hamburger"><i data-feather="menu"></i></a>
+          <div class="navbar-nav-detail absolute top-full bg-white w-1/2 tbt:w-1/4 h-screen duration-300">
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Home</a>
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Product</a>
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Search</a>
+            <a id="logoutBtn2" class="block text-black text-sm m-2 p-2 after:origin-top-left hover:after:scale-x-0">Log Out</a>
+          </div>
         </div>
-      </div>
-      <div class="navbar-extra">
-        <a href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
-        <a href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <div class="navbar-extra-btn">
-          <button class="btn-signin">Sign In</button>
-          <button class="btn-signup">Sign Up</button>
-        </div>
-        <a href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
-      </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Main Container Start -->
-    <main class="container">
-      <!-- Body Start -->
-      <div class="body">
-        <!-- Header Start -->
-        <header>
-          <h1>Profile</h1>
-        </header>
-        <!-- Header End -->
-
-        <!-- Profile Section Start -->
-        <section id="profile" class="profile">
-          <div class="profile-details">
-            <p class="name">Ghaluh Wizard</p>
-            <p class="email">ghaluhwizz@gmail.com</p>
-            <div class="profile-img">
-              <img src="assets/images/profile-img.webp" alt="profile-img" />
+        <div id="modalBg" class="fixed inset-0 bg-black bg-opacity-50 modal-bg justify-center items-center">
+          <div class="bg-white p-6 rounded shadow-lg max-w-md uw:max-w-2xl w-3/4 tbt:w-full text-center">
+            <h2 class="text-sm tbt:text-2xl uw:text-4xl font-semibold mb-4">Confirm Log Out</h2>
+            <p class="text-xs xsm:text-sm tbt:text-base uw:text-2xl mb-6">Are you sure you want to log out?</p>
+            <div class="flex justify-center">
+              <button id="confirmLogoutBtn" class="text-xs tbt:text-base uw:text-2xl bg-red-500 hover:bg-red-600 active:bg-red-700 text-white px-4 py-2 rounded mr-2">Log Out</button>
+              <button id="closeModalBtn" class="text-xs tbt:text-base uw:text-2xl bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white px-4 py-2 rounded">Cancel</button>
             </div>
-            <button class="btn-upload">Upload New Photo</button>
-            <p class="since">Since 20 January 2024</p>
           </div>
-          <div class="profile-form">
-            <form>
-              <label for="fullname">Full Name</label>
-              <div>
-                <img width="20" height="20" src="/assets/images/form-icon.svg" alt="name-icon" />
-                <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" autocomplete="name" />
-              </div>
-              <label for="email">Email</label>
-              <div>
-                <img width="20" height="20" src="/assets/images/email-icon.svg" alt="email-icon" />
-                <input type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
-              </div>
-              <label for="phone">Phone</label>
-              <div>
-                <img width="20" height="20" src="/assets/images/phone-icon.svg" alt="phone-icon" />
-                <input type="text" name="phone" id="phone" placeholder="Enter Your Phone" autocomplete="off" />
-              </div>
-              <div class="password">
-                <label for="password">Password</label>
-                <p>Set New Password</p>
-              </div>
-              <div>
-                <img width="20" height="20" src="/assets/images/password-icon.svg" alt="password-icon" />
-                <input type="password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off" />
-              </div>
-              <label for="address">Address</label>
-              <div>
-                <img width="20" height="20" src="/assets/images/address-icon.svg" alt="address-icon" />
-                <input type="text" name="address" id="address" placeholder="Enter Your Address" autocomplete="off" />
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </section>
-        <!-- Profile Section End -->
-      </div>
-      <!-- Body End -->
+        </div>
+      </nav>
+    </header>
+    <!-- Header End -->
 
-      <!-- Footer Start -->
-      <footer>
-        <div class="description-footer">
-          <img width="160" height="40" src="assets/images/footer-logo.webp" alt="footer-logo" class="footer-logo" />
-          <p class="desc">
-            Coffee Shop is a store that sells some good <br />
-            meals, and especially coffee. We provide <br />
-            high quality beans
-          </p>
-          <p class="copyright">&copy; 2024CoffeeStore</p>
+    <!-- Main Start -->
+    <main class="mt-[20%] tbt:mt-[10%] lg:mt-[7%] px-[5%] tbt:px-[10%]">
+      <h1 class="text-4xl mb-4">Profile</h1>
+      <section class="block tbt:flex">
+        <div class="border border-solid border-darkgray2 p-2 tbt:h-1/2 tbt:mr-4 tbt:w-1/2 md:w-2/5 lg:w-1/4 4xl:w-1/5">
+          <p class="text-center text-sm uw:text-xl">Ghaluh Wizard</p>
+          <p class="text-center text-sm uw:text-xl mb-2">ghaluhwizz@gmail.com</p>
+          <div class="grid place-items-center mb-2">
+            <img width="100" height="100" src="assets/images/profile-img.webp" alt="profile-img" />
+          </div>
+          <div class="flex justify-center items-center">
+            <button class="mb-2 text-lightblack text-sm uw:text-xl bg-primary hover:bg-darkprimary active:bg-darkprimary2 rounded-lg w-1/2 tbt:w-3/4 h-11 uw:h-16">Upload New Photo</button>
+          </div>
+          <p class="text-center text-sm uw:text-xl">Since 20 January 2024</p>
         </div>
-        <div class="product-footer">
-          <h2>Product</h2>
-          <a href="#">Our Product</a>
-          <a href="#">Pricing</a>
-          <a href="#">Locations</a>
-          <a href="#">Countries</a>
-          <a href="#">Blog</a>
-        </div>
-        <div class="engage-footer">
-          <h2>Engage</h2>
-          <a href="#">Partner</a>
-          <a href="#">FAQ</a>
-          <a href="#">About Us</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-        <div class="socials-footer">
-          <h2>Social Media</h2>
-          <a href="#"><img width="40" height="40" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
-          <a href="#"><img width="40" height="40" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
-          <a href="#"><img width="40" height="40" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
-        </div>
-      </footer>
-      <!-- Footer End -->
+        <form class="w-full mt-4 tbt:mt-0 border border-solid border-darkgray2 p-2">
+          <label class="text-lightblack2 font-semibold md:text-xl uw:text-2xl" for="fullname">Full Name</label>
+          <div class="relative mt-2">
+            <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/form-icon.svg" alt="name-icon" />
+            <input
+              class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs md:text-sm uw:text-xl"
+              type="text"
+              name="fullname"
+              id="fullname"
+              placeholder="Enter Your Full Name"
+              autocomplete="name"
+            />
+          </div>
+          <label class="text-lightblack2 font-semibold md:text-xl uw:text-2xl" for="email">Email</label>
+          <div class="relative mt-2">
+            <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/email-icon.svg" alt="email-icon" />
+            <input class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs md:text-sm uw:text-xl" type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
+          </div>
+          <label class="text-lightblack2 font-semibold md:text-xl uw:text-2xl" for="email" for="phone">Phone</label>
+          <div class="relative mt-2">
+            <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/phone-icon.svg" alt="phone-icon" />
+            <input class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs md:text-sm uw:text-xl" type="text" name="phone" id="phone" placeholder="Enter Your Phone" autocomplete="off" />
+          </div>
+          <div class="flex justify-between">
+            <label class="text-lightblack2 font-semibold md:text-xl uw:text-2xl" for="password">Password</label>
+            <p class="text-sm text-right text-primary">Set New Password</p>
+          </div>
+          <div class="relative mt-2">
+            <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/password-icon.svg" alt="password-icon" />
+            <input
+              class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs md:text-sm uw:text-xl"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter Your Password"
+              autocomplete="off"
+            />
+          </div>
+          <label class="text-lightblack2 font-semibold md:text-xl uw:text-2xl" for="address">Address</label>
+          <div class="relative mt-2">
+            <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/address-icon.svg" alt="address-icon" />
+            <input
+              class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs md:text-sm uw:text-xl"
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Enter Your Address"
+              autocomplete="off"
+            />
+          </div>
+          <button class="text-lightblack text-lg uw:text-2xl bg-primary hover:bg-darkprimary active:bg-darkprimary2 rounded-lg w-full h-11 uw:h-16" type="submit">Submit</button>
+        </form>
+      </section>
     </main>
-    <!-- Main Container End -->
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer class="flex flex-wrap bg-darkgray justify-between py-[1%] px-[5%] tbt:px-[10%] mt-12">
+      <div class="py-4 w-full tbt:w-1/2 md:w-fit">
+        <img class="mb-4 uw:w-60 uw:h-16" width="160" height="40" src="assets/images/footer-logo.webp" alt="footer-logo" />
+        <p class="mb-7 text-sm text-lightgray lg:text-lg uw:text-xl">
+          Coffee Shop is a store that sells some good <br />
+          meals, and especially coffee. We provide <br />
+          high quality beans
+        </p>
+        <p class="text-lightgray2 text-sm lg:text-base">&copy; 2024CoffeeStore</p>
+      </div>
+      <div class="py-4 w-1/2 tbt:w-1/4 md:w-fit">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Product</h2>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Our Product</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Pricing</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Locations</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Countries</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Blog</a>
+      </div>
+      <div class="py-4 w-1/2 tbt:w-1/4 md:w-fit">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Engage</h2>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Partner</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">FAQ</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">About Us</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Privacy Policy</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Terms of Service</a>
+      </div>
+      <div class="py-4 tbt:w-1/4 md:w-fit h-1/2">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Social Media</h2>
+        <div class="flex">
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
+          <a href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
 
     <!-- Feather Icons -->
     <script>

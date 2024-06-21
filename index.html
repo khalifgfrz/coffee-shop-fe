@@ -1,250 +1,339 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="You can enjoy with your coffee and order now!" />
     <title>Home</title>
-    <link rel="stylesheet" href="styles/index.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
     <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body>
-    <!-- Navbar Start -->
-    <nav class="navbar">
-      <div class="navbar-nav">
-        <div class="navbar-nav-logo">
-          <a href="#">
-            <img href="#" width="180" height="45" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
-          </a>
+  <body class="font-jakarta">
+    <!-- Header Start -->
+    <header>
+      <nav class="flex justify-between items-center bg-black fixed py-[2%] tbt:py-[0.5%] px-[5%] tbt:px-[10%] top-0 left-0 right-0 z-50">
+        <div class="flex items-center">
+          <div class="mr-16">
+            <a href="#">
+              <img href="#" width="90" height="22.5" class="tbt:w-44" src="/assets/images/navbar-logo.webp" alt="navbar-logo" />
+            </a>
+          </div>
+          <div class="hidden md:flex uw:text-xl">
+            <a
+              class="md:mr-16 md:text-white md:after:block md:after:border-b-2 md:after:border-solid md:after:border-primary md:after:scale-x-0 md:after:duration-200 md:after:ease-linear md:hover:after:scale-x-100 md:active:text-darkwhite"
+              href="#home"
+              >Home</a
+            >
+            <a
+              class="md:mr-16 md:text-white md:after:block md:after:border-b-2 md:after:border-solid md:after:border-primary md:after:scale-x-0 md:after:duration-200 md:after:ease-linear md:hover:after:scale-x-100 md:active:text-darkwhite"
+              href="#product"
+              >Product</a
+            >
+          </div>
         </div>
-        <div class="navbar-nav-detail">
-          <a href="#home">Home</a>
-          <a href="#product">Product</a>
+        <div class="flex justify-center items-center">
+          <a class="hidden md:flex md:mr-6" href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
+          <a class="mr-6" href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+          <div class="hidden md:flex uw:text-xl">
+            <button id="logoutBtn" class="bg-primary rounded text-sm lg:text-base w-16 h-8 lg:w-20 lg:h-10 uw:w-24 uw:h-12 hover:bg-darkprimary2 active:bg-darkprimary focus:bg-darkprimary2">Log Out</button>
+          </div>
+          <a id="hamburger-menu" class="md:hidden" href="#" aria-label="Read more about hamburger"><i data-feather="menu"></i></a>
+          <div class="navbar-nav-detail absolute top-full bg-white w-1/2 tbt:w-1/4 h-screen duration-300">
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Home</a>
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Product</a>
+            <a href="#" class="block text-black text-sm m-2 p-2 after:origin-top-left active:bg-darkgray">Search</a>
+            <a id="logoutBtn2" class="block text-black text-sm m-2 p-2 after:origin-top-left hover:after:scale-x-0">Log Out</a>
+          </div>
         </div>
-      </div>
-      <div class="navbar-extra">
-        <a href="#" aria-label="Read more about search" id="search"><i data-feather="search"></i></a>
-        <a href="#" aria-label="Read more about card" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <div class="navbar-extra-btn">
-          <button class="btn-signin">Sign In</button>
-          <button class="btn-signup">Sign Up</button>
+        <div id="modalBg" class="fixed inset-0 bg-black bg-opacity-50 modal-bg justify-center items-center">
+          <div class="bg-white p-6 rounded shadow-lg max-w-md uw:max-w-2xl w-3/4 tbt:w-full text-center">
+            <h2 class="text-sm tbt:text-2xl uw:text-4xl font-semibold mb-4">Confirm Log Out</h2>
+            <p class="text-xs xsm:text-sm tbt:text-base uw:text-2xl mb-6">Are you sure you want to log out?</p>
+            <div class="flex justify-center">
+              <button id="confirmLogoutBtn" class="text-xs tbt:text-base uw:text-2xl bg-red-500 hover:bg-red-600 active:bg-red-700 text-white px-4 py-2 rounded mr-2">Log Out</button>
+              <button id="closeModalBtn" class="text-xs tbt:text-base uw:text-2xl bg-gray-500 hover:bg-gray-600 active:bg-gray-700 text-white px-4 py-2 rounded">Cancel</button>
+            </div>
+          </div>
         </div>
-        <a href="#" aria-label="Read more about hamburger" id="hamburger-menu"><i data-feather="menu"></i></a>
-      </div>
-    </nav>
-    <!-- Navbar End -->
+      </nav>
+    </header>
+    <!-- Header End -->
 
-    <main class="container">
-      <section class="hero" id="home">
-        <div class="header-img">
+    <!-- Main Start -->
+    <main>
+      <section class="tbt:flex tbt:flex-row-reverse">
+        <div class="tbt:w-1/2">
           <img src="assets/images/header-img.webp" alt="header-img" />
         </div>
-        <div class="header-content">
-          <h1>Start Your Day with Coffee and Good Meals</h1>
-          <p>We provide high quality beans, good taste, and healthy meals made by love just for you. Start your day with us for a bigger smile!</p>
-          <button class="started">Get Started</button>
-          <div class="plus">
-            <div class="staff">
-              <p class="staff-number">90+</p>
-              <p class="staff-text">Staff</p>
+        <div class="tbt:w-1/2 max-tbt:absolute max-tbt:top-[52%] xxsm:top-[60%] xsm:top-[68%] px-[5%] tbt:pl-[10%] py-12 tbt:pt-20 tbt:pb-0 bg-black">
+          <h1 class="text-2xl text-white">Start Your Day with Coffee and Good Meals</h1>
+          <p class="mt-5 text-sm text-white">We provide high quality beans, good taste, and healthy meals made by love just for you. Start your day with us for a bigger smile!</p>
+          <button class="mt-4 bg-primary hover:bg-darkprimary active:bg-darkprimary2 px-[5%] py-3 rounded-xl">Get Started</button>
+          <div class="flex justify-between mt-5">
+            <div class="staff mr-5">
+              <p class="text-primary text-2xl">90+</p>
+              <p class="text-white text-xs">Staff</p>
             </div>
-            <div class="stores">
-              <p class="stores-number">30+</p>
-              <p class="stores-text">Stores</p>
+            <div class="stores border-x border-white px-10 mr-5">
+              <p class="text-primary text-2xl">30+</p>
+              <p class="text-white text-xs">Stores</p>
             </div>
-            <div class="customer">
-              <p class="customer-number">800+</p>
-              <p class="customer-text">Customer</p>
+            <div class="mr-auto">
+              <p class="text-primary text-2xl">800+</p>
+              <p class="text-white text-xs">Customer</p>
             </div>
           </div>
         </div>
       </section>
-      <section id="about" class="about">
-        <div class="about-img">
+      <section class="block tbt:flex tbt:flex-row-reverse px-[5%] tbt:pl-[10%] tbt:pr-0 mt-[100%] xxsm:mt-[85%] xsm:mt-[75%] tbt:mt-0">
+        <div class="hidden tbt:flex tbt:w-[63%]">
           <img src="assets/images/about-img.webp" alt="about-img" />
         </div>
-        <div class="about-content">
-          <div class="about-content-header">
-            <div class="vertical-line"></div>
-            <h1>We Provide <span>Good Coffee</span> and <span>Healthy Meals</span></h1>
+        <div class="pt-5 tbt:pr-[5%] tbt:w-1/2">
+          <div class="flex items-center">
+            <div class="w-1 h-16 bg-primary mr-2"></div>
+            <h1 class="text-2xl">We Provide <span class="text-span">Good Coffee</span> and <span class="text-span">Healthy Meals</span></h1>
           </div>
-          <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-          <div class="about-content-group">
-            <img width="20" height="20" src="assets/images/checklist-logo.svg" alt="checklist-logo" />
-            <p>High quality beans</p>
+          <p class="text-lightgray text-sm mt-2">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+          <div class="flex mt-2">
+            <img width="15" height="15" src="assets/images/checklist-logo.svg" alt="checklist-logo" />
+            <p class="ml-2 text-sm text-lightgray">High quality beans</p>
           </div>
-          <div class="about-content-group">
-            <img width="20" height="20" src="assets/images/checklist-logo.svg" alt="checklist-logo" />
-            <p>Healthy meals, you can request the ingredients</p>
+          <div class="flex mt-2">
+            <img width="15" height="15" src="assets/images/checklist-logo.svg" alt="checklist-logo" />
+            <p class="ml-2 text-sm text-lightgray">Healthy meals, you can request the ingredients</p>
           </div>
-          <div class="about-content-group">
-            <img width="20" height="20" src="assets/images/checklist-logo.svg" alt="checklist-logo" />
-            <p>Chat with our staff to get better experience for ordering</p>
+          <div class="flex mt-2">
+            <img width="15" height="15" src="assets/images/checklist-logo.svg" alt="checklist-logo" />
+            <p class="ml-2 text-sm text-lightgray">Chat with our staff to get better experience for ordering</p>
           </div>
-          <div class="about-content-group">
-            <img width="20" height="20" src="assets/images/checklist-logo.svg" alt="checklist-logo" />
-            <p>Free member card with a minimum purchase of IDR 200.000.</p>
+          <div class="flex mt-2">
+            <img width="15" height="15" src="assets/images/checklist-logo.svg" alt="checklist-logo" />
+            <p class="ml-2 text-sm text-lightgray">Free member card with a minimum purchase of IDR 200.000.</p>
           </div>
         </div>
       </section>
-      <section id="product" class="product">
-        <div class="menu-header">
-          <h1>Here is People's <span>Favorite</span></h1>
+      <section class="my-5 px-[5%]">
+        <div class="text-center">
+          <h1 class="text-2xl">Here is People's <span class="text-span">Favorite</span></h1>
+          <div class="flex justify-center">
+            <div class="w-16 h-1 bg-primary mt-2"></div>
+          </div>
+          <p class="mt-2 text-sm text-lightgray">Let's choose and have a bit taste of poeple's favorite. It might be yours too!</p>
+        </div>
+        <div class="flex flex-wrap justify-center">
+          <div class="w-1/3 mr-2 tbt:w-1/5">
+            <div class="flex">
+              <img class="mt-4 mb-2 w-full" src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
+            </div>
+            <div>
+              <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
+              <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+              <div class="flex text-primary items-center mt-1">
+                <div class="uw:text-xl" data-value="1">&#9733;</div>
+                <div class="uw:text-xl" data-value="2">&#9733;</div>
+                <div class="uw:text-xl" data-value="3">&#9733;</div>
+                <div class="uw:text-xl" data-value="4">&#9733;</div>
+                <div class="mr-1 uw:text-xl" data-value="5">&#9733;</div>
+                <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
+              </div>
+              <div class="flex items-center">
+                <p class="hidden tbt:flex tbt:text-red-600 tbt:text-[0.7rem] md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
+                <p class="text-primary text-sm md:text-xl uw:text-2xl">IDR 20.000</p>
+              </div>
+              <div>
+                <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
+                <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
+                  <div class="flex items-center justify-center">
+                    <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/3 tbt:mr-2 tbt:w-1/5">
+            <div class="flex">
+              <img class="mt-4 mb-2 w-full" src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
+            </div>
+            <div>
+              <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
+              <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+              <div class="flex text-primary items-center mt-1">
+                <div class="uw:text-xl" data-value="1">&#9733;</div>
+                <div class="uw:text-xl" data-value="2">&#9733;</div>
+                <div class="uw:text-xl" data-value="3">&#9733;</div>
+                <div class="uw:text-xl" data-value="4">&#9733;</div>
+                <div class="mr-1 uw:text-xl" data-value="5">&#9733;</div>
+                <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
+              </div>
+              <div class="flex items-center">
+                <p class="hidden tbt:flex tbt:text-red-600 tbt:text-[0.7rem] md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
+                <p class="text-primary text-sm md:text-xl uw:text-2xl">IDR 20.000</p>
+              </div>
+              <div>
+                <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
+                <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
+                  <div class="flex items-center justify-center">
+                    <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/3 mr-2 tbt:w-1/5">
+            <div class="flex">
+              <img class="mt-4 mb-2 w-full" src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
+            </div>
+            <div>
+              <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
+              <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+              <div class="flex text-primary items-center mt-1">
+                <div class="uw:text-xl" data-value="1">&#9733;</div>
+                <div class="uw:text-xl" data-value="2">&#9733;</div>
+                <div class="uw:text-xl" data-value="3">&#9733;</div>
+                <div class="uw:text-xl" data-value="4">&#9733;</div>
+                <div class="mr-1 uw:text-xl" data-value="5">&#9733;</div>
+                <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
+              </div>
+              <div class="flex items-center">
+                <p class="hidden tbt:flex tbt:text-red-600 tbt:text-[0.7rem] md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
+                <p class="text-primary text-sm md:text-xl uw:text-2xl">IDR 20.000</p>
+              </div>
+              <div>
+                <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
+                <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
+                  <div class="flex items-center justify-center">
+                    <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/3 tbt:mr-2 tbt:w-1/5">
+            <div class="flex">
+              <img class="mt-4 mb-2 w-full" src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
+            </div>
+            <div>
+              <p class="font-bold mb-1 text-sm md:text-lg uw:text-2xl">Hazzlenut Latte</p>
+              <p class="text-xs md:text-sm lg:text-base uw:text-xl text-lightgray">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+              <div class="flex text-primary items-center mt-1">
+                <div class="uw:text-xl" data-value="1">&#9733;</div>
+                <div class="uw:text-xl" data-value="2">&#9733;</div>
+                <div class="uw:text-xl" data-value="3">&#9733;</div>
+                <div class="uw:text-xl" data-value="4">&#9733;</div>
+                <div class="mr-1 uw:text-xl" data-value="5">&#9733;</div>
+                <div class="text-lightgray text-sm uw:text-2xl">5.0</div>
+              </div>
+              <div class="flex items-center">
+                <p class="hidden tbt:flex tbt:text-red-600 tbt:text-[0.7rem] md:text-sm uw:text-base tbt:line-through tbt:mr-2">IDR 40.000</p>
+                <p class="text-primary text-sm md:text-xl uw:text-2xl">IDR 20.000</p>
+              </div>
+              <div>
+                <button class="w-full h-8 bg-primary font-semibold rounded hover:bg-darkprimary2 active:bg-darkprimary text-xs">Buy</button>
+                <button class="mt-3 w-full h-8 border border-solid border-primary text-primary rounded hover:bg-darkwhite2 active:bg-darkwhite text-xs">
+                  <div class="flex items-center justify-center">
+                    <img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-5 px-[5%]">
+        <div class="text-center">
+          <h1 class="text-2xl"><span class="text-span">Visit Our Store</span> in the Spot on the Map Below</h1>
           <div class="line">
             <div class="horizontal-line"></div>
           </div>
-          <p>Let's choose and have a bit taste of poeple's favorite. It might be yours too!</p>
+          <p class="text-lightgray text-sm mt-2">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
         </div>
-        <div class="product-menu">
-          <div class="product-card">
-            <div class="menu-card">
-              <p class="flash-sale">FLASH SALE!</p>
-              <img src="assets/images/menu/1.webp" alt="Hazzlenut Latte" />
-              <h2>Hazzlenut Latte</h2>
-              <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-              <div class="price">
-                <p class="price-normal">IDR 20.000</p>
-                <p class="price-discount">IDR 10.000</p>
-              </div>
-              <div class="menu-btn">
-                <button class="btn-buy">Buy</button>
-                <button class="btn-cart"><img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
-              </div>
-            </div>
-            <div class="menu-card">
-              <p class="flash-sale">FLASH SALE!</p>
-              <img src="assets/images/menu/2.webp" alt="Hazzlenut Latte" />
-              <h2>Hazzlenut Latte</h2>
-              <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-              <div class="price">
-                <p class="price-normal">IDR 20.000</p>
-                <p class="price-discount">IDR 10.000</p>
-              </div>
-              <div class="menu-btn">
-                <button class="btn-buy">Buy</button>
-                <button class="btn-cart"><img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
-              </div>
-            </div>
-            <div class="menu-card">
-              <p class="flash-sale">FLASH SALE!</p>
-              <img src="assets/images/menu/3.webp" alt="Hazzlenut Latte" />
-              <h2>Hazzlenut Latte</h2>
-              <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-              <div class="price">
-                <p class="price-normal">IDR 20.000</p>
-                <p class="price-discount">IDR 10.000</p>
-              </div>
-              <div class="menu-btn">
-                <button class="btn-buy">Buy</button>
-                <button class="btn-cart"><img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
-              </div>
-            </div>
-            <div class="menu-card">
-              <p class="flash-sale">FLASH SALE!</p>
-              <img src="assets/images/menu/4.webp" alt="Hazzlenut Latte" />
-              <h2>Hazzlenut Latte</h2>
-              <p class="description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-              <div class="price">
-                <p class="price-normal">IDR 20.000</p>
-                <p class="price-discount">IDR 10.000</p>
-              </div>
-              <div class="menu-btn">
-                <button class="btn-buy">Buy</button>
-                <button class="btn-cart"><img width="20" height="20" src="assets/images/shopping-cart.svg" alt="shopping-cart" /></button>
-              </div>
-            </div>
+        <img class="mt-2" src="assets/images/visit-img.webp" alt="visit-img" />
+      </section>
+      <section class="bg-homebg py-5 px-[5%]">
+        <div class="testimonial-content block">
+          <h2 class="text-white text-sm text-center" style="grid-area: header">TESTIMONIAL</h2>
+          <div class="grid place-items-center mt-2" style="grid-area: image">
+            <img class="w-3/4" src="assets/images/testimonial-img.webp" alt="" />
+          </div>
+          <div class="flex items-center mt-2" style="grid-area: name">
+            <div class="w-1 h-10 bg-primary mr-2"></div>
+            <h1 class="text-xl text-white">Viezh Robert</h1>
+          </div>
+          <p class="text-primary mt-2 text-sm" style="grid-area: title">Manager Coffee Shop</p>
+          <p class="mt-2 text-xs text-white" style="grid-area: reaction">“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!"</p>
+          <div class="flex text-primary items-center mt-1" style="grid-area: rating">
+            <div class="mr-1 uw:text-4xl" data-value="1">&#9733;</div>
+            <div class="mr-1 uw:text-4xl" data-value="2">&#9733;</div>
+            <div class="mr-1 uw:text-4xl" data-value="3">&#9733;</div>
+            <div class="mr-1 uw:text-4xl" data-value="4">&#9733;</div>
+            <div class="mr-1 uw:text-4xl" data-value="5">&#9733;</div>
+            <div class="text-white text-sm uw:text-2xl">5.0</div>
+          </div>
+          <div class="flex mt-2" style="grid-area: button">
+            <button class="left-button mr-2 w-10 h-10 rounded-full bg-white hover:bg-primary active:bg-darkprimary">&#9664;</button>
+            <button class="right-button w-10 h-10 rounded-full bg-white hover:bg-primary active:bg-darkprimary">&#9654;</button>
+          </div>
+          <div class="flex mt-5" style="grid-area: pagination">
+            <div class="dot w-2 h-2 mr-1 bg-white rounded-full" data-page="1"></div>
+            <div class="dot w-2 h-2 mr-1 bg-white rounded-full" data-page="2"></div>
+            <div class="dot w-2 h-2 mr-1 bg-white rounded-full" data-page="3"></div>
+            <div class="dot w-2 h-2 bg-white rounded-full" data-page="4"></div>
           </div>
         </div>
       </section>
-      <section id="visit" class="visit">
-        <div class="visit-header">
-          <h1><span>Visit Our Store</span> in the Spot on the Map Below</h1>
-          <div class="line">
-            <div class="horizontal-line"></div>
-          </div>
-          <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
-        </div>
-        <div class="visit-img">
-          <img src="assets/images/visit-img.webp" alt="visit-img" />
-        </div>
-      </section>
-      <section id="testimonial" class="testimonial">
-        <div class="testimonial-content">
-          <h2 style="grid-area: header">TESTIMONIAL</h2>
-          <div class="testimonial-img" style="grid-area: image">
-            <img src="assets/images/testimonial-img.webp" alt="" />
-          </div>
-          <div class="testimonial-name" style="grid-area: name">
-            <div class="vertical-line"></div>
-            <h1>Viezh Robert</h1>
-          </div>
-          <p class="title" style="grid-area: title">Manager Coffee Shop</p>
-          <p class="react" style="grid-area: reaction">“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!"</p>
-          <div class="star-rating" style="grid-area: rating">
-            <div class="star" data-value="1">&#9733;</div>
-            <div class="star" data-value="2">&#9733;</div>
-            <div class="star" data-value="3">&#9733;</div>
-            <div class="star" data-value="4">&#9733;</div>
-            <div class="star" data-value="5">&#9733;</div>
-            <div class="rating-value">5.0</div>
-          </div>
-          <div class="btn-page" style="grid-area: button">
-            <button class="left-button">&#9664;</button>
-            <button class="right-button">&#9654;</button>
-          </div>
-          <div class="pagination-dots" style="grid-area: pagination">
-            <div class="dot" data-page="1"></div>
-            <div class="dot" data-page="2"></div>
-            <div class="dot" data-page="3"></div>
-            <div class="dot" data-page="4"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer Start -->
-      <footer>
-        <div class="description-footer">
-          <img width="160" height="40" src="assets/images/footer-logo.webp" alt="footer-logo" class="footer-logo" />
-          <p class="desc">
-            Coffee Shop is a store that sells some good <br />
-            meals, and especially coffee. We provide <br />
-            high quality beans
-          </p>
-          <p class="copyright">&copy; 2024CoffeeStore</p>
-        </div>
-        <div class="product-footer">
-          <h2>Product</h2>
-          <a href="#">Our Product</a>
-          <a href="#">Pricing</a>
-          <a href="#">Locations</a>
-          <a href="#">Countries</a>
-          <a href="#">Blog</a>
-        </div>
-        <div class="engage-footer">
-          <h2>Engage</h2>
-          <a href="#">Partner</a>
-          <a href="#">FAQ</a>
-          <a href="#">About Us</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-        <div class="socials-footer">
-          <h2>Social Media</h2>
-          <a href="#"><img width="40" height="40" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
-          <a href="#"><img width="40" height="40" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
-          <a href="#"><img width="40" height="40" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
-        </div>
-      </footer>
-      <!-- Footer End -->
     </main>
+    <!-- Main End -->
 
+    <!-- Footer Start -->
+    <footer class="flex flex-wrap bg-darkgray justify-between py-[1%] px-[5%] tbt:px-[10%] mt-12">
+      <div class="py-4 w-full tbt:w-1/2 md:w-fit">
+        <img class="mb-4 uw:w-60 uw:h-16" width="160" height="40" src="assets/images/footer-logo.webp" alt="footer-logo" />
+        <p class="mb-7 text-sm text-lightgray lg:text-lg uw:text-xl">
+          Coffee Shop is a store that sells some good <br />
+          meals, and especially coffee. We provide <br />
+          high quality beans
+        </p>
+        <p class="text-lightgray2 text-sm lg:text-base">&copy; 2024CoffeeStore</p>
+      </div>
+      <div class="py-4 w-1/2 tbt:w-1/4 md:w-fit">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Product</h2>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Our Product</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Pricing</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Locations</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Countries</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Blog</a>
+      </div>
+      <div class="py-4 w-1/2 tbt:w-1/4 md:w-fit">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Engage</h2>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Partner</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">FAQ</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">About Us</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Privacy Policy</a>
+        <a class="flex mb-4 text-lightgray text-sm lg:text-lg uw:text-xl hover:underline active:text-lightgray2" href="#">Terms of Service</a>
+      </div>
+      <div class="py-4 tbt:w-1/4 md:w-fit h-1/2">
+        <h2 class="mb-6 font-bold text-sm lg:text-lg uw:text-xl">Social Media</h2>
+        <div class="flex">
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/facebook-icon-footer.svg" alt="facebook-icon" /></a>
+          <a class="mr-4" href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/twitter-icon-footer.svg" alt="twitter-icon" /></a>
+          <a href="#"><img class="rounded-full hover:bg-lightblack active:bg-black tbt:w-9 tbt:h-9 uw:w-12 uw:h-12" width="30" height="30" src="assets/images/instagram-icon-footer.svg" alt="instagram-icon" /></a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feather Icons -->
     <script>
       feather.replace();
     </script>

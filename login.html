@@ -7,72 +7,69 @@
     <title>Login</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/logo/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/logo/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/logo/favicon-16x16.png" />
     <link rel="manifest" href="assets/icon/logo//site.webmanifest" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
   </head>
-  <body>
-    <!-- Main Container Start -->
-    <main class="container">
-      <!-- Header Start -->
-      <header id="header" class="header">
-        <img src="/assets/images/header-logo.webp" alt="header-logo" />
-        <h2>Login</h2>
-        <p>Fill out the form correctly</p>
-      </header>
-      <!-- Header End -->
+  <body class="font-jakarta bg-none md:bg-[url('/assets/images/background-login.webp')] md:bg-no-repeat md:bg-cover md:bg-center">
+    <!-- Header Start -->
+    <header class="bg-white w-full px-5 md:w-3/5 md:ml-[35%] mx-auto mt-20">
+      <img class="w-1/2 tbt:w-1/5" src="/assets/images/header-logo.webp" alt="header-logo" />
+      <h2 class="text-span mt-4 md:mt-7 font-bold text-2xl uw:text-4xl">Login</h2>
+      <p class="my-7 text-lightgray text-xl uw:text-2xl">Fill out the form correctly</p>
+    </header>
+    <!-- Header End -->
 
-      <!-- Login Form Section Start -->
-      <section id="login-form" class="login-form">
+    <!-- Main Start -->
+    <main class="bg-white w-full px-5 md:w-3/5 md:ml-[35%] mx-auto">
+      <section>
         <form>
-          <label for="email">Email</label>
-          <div>
-            <img width="20" height="20" src="/assets/images/email-icon.svg" alt="email-icon" class="icon" />
-            <input type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
+          <label class="text-lightblack2 font-semibold md:text-xl uw:text-2xl" for="email">Email</label>
+          <div class="relative mt-2">
+            <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/email-icon.svg" alt="email-icon" class="icon" />
+            <input class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs md:text-sm uw:text-xl" type="text" name="email" id="email" placeholder="Enter Your Email" autocomplete="email" />
           </div>
-          <label for="password">Password</label>
-          <div>
-            <img width="20" height="20" src="/assets/images/password-icon.svg" alt="password-icon" class="icon" />
-            <input type="password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off" />
+          <label class="text-lightblack2 font-semibold md:text-xl uw:text-2xl" for="password">Password</label>
+          <div class="relative mt-2">
+            <img class="absolute mt-4 ml-5" width="20" height="20" src="/assets/images/password-icon.svg" alt="password-icon" class="icon" />
+            <input
+              class="w-full h-12 border border-solid border-darkwhite rounded-xl pt-0.5 pl-14 text-lightgray mb-3 text-xs md:text-sm uw:text-xl"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter Your Password"
+              autocomplete="off"
+            />
           </div>
-          <div class="forgotpassword">
+          <div class="text-right text-sm uw:text-2xl mb-5 text-primary hover:text-darkprimary active:text-darkprimary2">
             <a href="#">Lupa Password?</a>
           </div>
-          <button class="btn-login" type="submit">Login</button>
-          <p class="register">Not Have An Account? <a class="registerhref" href="register.html">Register</a></p>
+          <button class="text-lightblack text-lg uw:text-2xl bg-primary hover:bg-darkprimary active:bg-darkprimary2 rounded-lg w-full h-11 uw:h-16" type="submit">Login</button>
+          <p class="text-center text-lightgray text-sm uw:text-2xl my-5">Not Have An Account? <a class="text-primary hover:text-darkprimary hover:underline active:text-darkprimary2 active:underline" href="register.html">Register</a></p>
         </form>
       </section>
-      <!-- Login Form Section End -->
-
-      <!-- Sign Up Option Section Start -->
-      <section id="sign-up-option" class="sign-up-option">
-        <p>Or</p>
-        <div class="sign-up-option-btn">
-          <button class="btn-facebook">
-            <div class="btn-facebook-details">
-              <img src="/assets/images/facebook-icon.svg" alt="facebook-icon" class="facebook-icon" />
-              <div class="facebook-text">Facebook</div>
+      <section>
+        <p class="text-center text-sm uw:text-2xl text-gray">Or</p>
+        <div class="mt-7 flex justify-around">
+          <button class="w-16 h-16 md:w-2/5 shadow-lg hover:bg-darkwhite active:bg-darkwhite2">
+            <div class="flex justify-center">
+              <img class="uw:w-8 uw:h-8" width="22" height="22" src="/assets/images/facebook-icon.svg" alt="facebook-icon" />
+              <div class="hidden md:flex text-lg uw:text-2xl text-lightgray ml-6">Facebook</div>
             </div>
           </button>
-          <button class="btn-google">
-            <div class="btn-google-details">
-              <img src="/assets/images/google-icon.svg" alt="google-icon" class="google-icon" />
-              <div class="google-text">Google</div>
+          <button class="w-16 h-16 md:w-2/5 shadow-lg hover:bg-darkwhite active:bg-darkwhite2">
+            <div class="flex justify-center">
+              <img class="uw:w-8 uw:h-8" width="22" height="22" src="/assets/images/google-icon.svg" alt="google-icon" class="google-icon" />
+              <div class="hidden md:flex text-lg uw:text-2xl text-lightgray ml-6">Google</div>
             </div>
           </button>
         </div>
       </section>
-      <!-- Sign Up Option Section End -->
     </main>
-    <!-- Main Container End -->
+    <!-- Main End -->
   </body>
 </html>

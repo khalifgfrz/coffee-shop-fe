@@ -3,6 +3,7 @@ const tailwindConfig = {
   content: ["*.{html,js}"],
   theme: {
     screens: {
+      xxsm: "321px",
       xsm: "376px",
       tbt: "426px",
       sm: "641px",
@@ -14,8 +15,9 @@ const tailwindConfig = {
       uw: "2041px",
     },
     extend: {
-      content: {
-        primary: "",
+      backgroundImage: {
+        "bg-login": "url('/assets/images/background-login.webp')",
+        "bg-home": "url('/assets/images/header-img.webp')",
       },
       fontFamily: {
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
@@ -26,9 +28,11 @@ const tailwindConfig = {
         darkprimary2: "#EF8001",
         lightprimary: "#FFE5C8",
         secondary: "#a0a3bd",
+        homebg: "#202020",
         black: "#0b0909",
         lightblack: "#353030",
         lightblack2: "#0b132a",
+        gray: "#aaaaaa",
         lightgray: "#4f5665",
         lightgray2: "#afb5c0",
         darkgray: "#f8f8f8",
@@ -53,8 +57,19 @@ const tailwindConfig = {
         "10%": "10%",
         "15%": "15%",
         "20%": "20%",
+        "35%": "35%",
+        "45%": "45%",
+        "50%": "50%",
+        "75%": "75%",
+        "80%": "80%",
+        "85%": "85%",
+        "100%": "100%",
       },
       inset: {
+        "52%": "52%",
+        "60%": "60%",
+        "65%": "65%",
+        "68%": "68%",
         "-100%": "-100%",
         "-150%": "-150%",
         "-200%": "-200%",
@@ -62,6 +77,11 @@ const tailwindConfig = {
       width: {
         "30rem": "30rem",
         "45%": "45%",
+        "55%": "55%",
+        "60%": "60%",
+        "63%": "63%",
+        "65%": "65%",
+        "70%": "70%",
       },
       fontSize: {
         "0.5rem": "0.5rem",
