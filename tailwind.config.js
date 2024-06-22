@@ -15,9 +15,13 @@ const tailwindConfig = {
       uw: "2041px",
     },
     extend: {
+      minHeight: {
+        "50vh": "50vh",
+      },
       backgroundImage: {
         "bg-login": "url('/assets/images/background-login.webp')",
         "bg-home": "url('/assets/images/header-img.webp')",
+        "bg-product": "url('/assets/images/background-product.webp')",
       },
       fontFamily: {
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
@@ -44,6 +48,7 @@ const tailwindConfig = {
         greenbg: "#C9E6C9",
         bggreen: "#88b788",
         bgyellow: "#f5c361",
+        bgpage: "#dde0e4",
         span: "#8e6447",
       },
       padding: {
@@ -73,6 +78,13 @@ const tailwindConfig = {
         "100%": "100%",
       },
       inset: {
+        "22rem": "22rem",
+        "26rem": "26rem",
+        "27rem": "27rem",
+        "30rem": "30rem",
+        "32rem": "32rem",
+        "34rem": "34rem",
+        "36rem": "36rem",
         "52%": "52%",
         "60%": "60%",
         "65%": "65%",
@@ -83,8 +95,16 @@ const tailwindConfig = {
         "-200%": "-200%",
       },
       width: {
-        "30rem": "30rem",
         "19rem": "19rem",
+        "22rem": "22rem",
+        "26rem": "26rem",
+        "27rem": "27rem",
+        "30rem": "30rem",
+        "32rem": "32rem",
+        "34rem": "34rem",
+        "36rem": "36rem",
+        "38rem": "38rem",
+        "40rem": "40rem",
         "45%": "45%",
         "55%": "55%",
         "60%": "60%",
