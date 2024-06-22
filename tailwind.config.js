@@ -42,6 +42,8 @@ const tailwindConfig = {
         darkwhite2: "#f3f3f3",
         green: "#00A700",
         greenbg: "#C9E6C9",
+        bggreen: "#88b788",
+        bgyellow: "#f5c361",
         span: "#8e6447",
       },
       padding: {
@@ -61,6 +63,7 @@ const tailwindConfig = {
         "10%": "10%",
         "15%": "15%",
         "20%": "20%",
+        "25%": "25%",
         "35%": "35%",
         "45%": "45%",
         "50%": "50%",
