@@ -12,6 +12,20 @@
 
 /* untuk bikin component class */
 @layer components {
+  .testimonial-content {
+    display: grid;
+    max-width: 100%;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image header"
+      "image name"
+      "image title"
+      "image reaction"
+      "image rating"
+      "image button"
+      "image pagination";
+  }
   .navbar-nav-detail {
     @apply right-[-150%];
   }
